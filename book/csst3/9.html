@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+<meta name="360-site-verification" content="cabcfb5a0f4c0d28d604e8a69e6c0cdb" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="baidu-site-verification" content="HknqsD2zhn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS3 Tutorial 《CSS3 教程》-编码助手网</title>
+      <meta content="为编码人员提供在线文档、模板等帮助，提升解决问题效率" name="description">
+			<meta content="CSS3 Tutorial 《CSS3 教程》Java, spring, tomcat, servlet, jsp, api doc, bootstrap" name="keywords">
+<meta name="sogou_site_verification" content="42nApEZFKO"/>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?360061a8585ccbc89aff7015229664f9";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">编码助手网</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+										<li>
+                        <a href="/template.html">模板</a>
+                    </li>
+										<li>
+												<a href="/doc.html">文档</a>
+										</li>
+                    <li>
+                        <a href="/contact.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<div class="row">
+					<div class="col-xs-4">
+						<h4>CSS3 Tutorial 《CSS3 教程》</h4>
+						<h6>感谢waylau.com提供内容</h6>
+<ul><li><a href='./0.html'>介绍</a></li><li><a href='./1.html'>动画</a></li><li><a href='./2.html'>边框</a></li><li><a href='./3.html'>背景</a></li><li><a href='./4.html'>字体</a></li><li><a href='./5.html'>多列</a></li><li><a href='./6.html'>UI</a></li><li><a href='./7.html'>过渡效果</a></li><li><a href='./8.html'>文本效果</a></li><li><a href='./9.html'>2D</a></li><li><a href='./10.html'>3D</a></li><li></li>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+<div class="col-xs-8">
+	<nav>
+		<ul class="pager">
+			<li class='previous'><a href='8.html'>&larr; 文本效果</a></li>
+		<li class='next'><a href='10.html'>3D&rarr;</a></li>
+		</ul>
+	</nav>
+			<div class="row"><div class="col-xs-12">2D 转换<br>====<br><br>CSS3 2D转换，我们可以斜拉(skew)，缩放(scale)，旋转(rotate)以及位移(translate)元素。<br><br><br><br>**注意：** Internet Explorer 10, Firefox, 和 Opera支持transform 属性。Chrome 和 Safari 要求前缀 -webkit- 版本。<br>Internet Explorer 9 要求前缀 -ms- 版本.<br><br>常用 2D 变换方法：<br><br>* translate()<br>* rotate()<br>* scale()<br>* skew()<br>* matrix()<br><br>## translate()<br><br>translate()方法，根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动<br><br>    .translate {<br>        transform: translate(50px, 100px);<br>        -ms-transform: translate(50px, 100px); /* IE 9 */<br>        -webkit-transform: translate(50px, 100px); /* Safari and Chrome */<br>    }<br>    <br>## rotate()<br><br>rotate()方法，在一个给定度数沿着元素中心顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转。<br><br>    .rotate<br>    {<br>        transform:rotate(30deg);<br>        -ms-transform:rotate(30deg); /* IE 9 */<br>        -webkit-transform:rotate(30deg); /* Safari and Chrome */<br>    }<br>        <br>## scale()<br><br>scale()方法，该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数：<br><br>    .scale<br>    {<br>        transform: scale(2,4);<br>        -ms-transform: scale(2,4); /* IE 9 */<br>        -webkit-transform: scale(2,4); /* Safari and Chrome */<br>    }<br>    <br>## skew()<br><br>skew()方法，该元素会根据横向（X轴）和垂直（Y轴）线参数给定角度：<br><br>    .skew<br>    {<br>        transform:skew(30deg,20deg);<br>        -ms-transform:skew(30deg,20deg); /* IE 9 */<br>        -webkit-transform:skew(30deg,20deg); /* Safari and Chrome */<br>    }<br>    <br>skewX(30deg) 如下图：<br><br>![](../images/skewx.jpg)<br><br>skewY(10deg) 如下图：<br><br>![](../images/skewy.jpg)<br><br>skew(30deg, 10deg) 如下图：<br>        <br>![](../images/skew.jpg)<br>## matrix()<br><br>matrix()方法和2D变换方法合并成一个。<br><br>matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能。<br><br>    .matrix<br>    {<br>        transform:matrix(0.866,0.5,-0.5,0.866,0,0);<br>        -ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* IE 9 */<br>        -webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* Safari and Chrome */<br>    }<br><br>## 源码<br><br>本文中所用例子源码参见<br><https://github.com/waylau/css3-tutorial> 中 `samples` 目录下的 2d_transform.html<br><br>## 参考<br>* <http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/></div></div>
+			<nav>
+				<ul class="pager">
+				<li class='previous'><a href='8.html'>&larr; 文本效果</a></li>
+			<li class='next'><a href='10.html'>3D&rarr;</a></li>
+				</ul>
+			</nav>
+</div>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+			<!-- /.row -->
+			  <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; 小龙软件工作室 2016 粤icp备16103410</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

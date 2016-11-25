@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+<meta name="360-site-verification" content="cabcfb5a0f4c0d28d604e8a69e6c0cdb" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="baidu-site-verification" content="HknqsD2zhn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS3 Tutorial 《CSS3 教程》-编码助手网</title>
+      <meta content="为编码人员提供在线文档、模板等帮助，提升解决问题效率" name="description">
+			<meta content="CSS3 Tutorial 《CSS3 教程》Java, spring, tomcat, servlet, jsp, api doc, bootstrap" name="keywords">
+<meta name="sogou_site_verification" content="42nApEZFKO"/>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?360061a8585ccbc89aff7015229664f9";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">编码助手网</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+										<li>
+                        <a href="/template.html">模板</a>
+                    </li>
+										<li>
+												<a href="/doc.html">文档</a>
+										</li>
+                    <li>
+                        <a href="/contact.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<div class="row">
+					<div class="col-xs-4">
+						<h4>CSS3 Tutorial 《CSS3 教程》</h4>
+						<h6>感谢waylau.com提供内容</h6>
+<ul><li><a href='./0.html'>介绍</a></li><li><a href='./1.html'>动画</a></li><li><a href='./2.html'>边框</a></li><li><a href='./3.html'>背景</a></li><li><a href='./4.html'>字体</a></li><li><a href='./5.html'>多列</a></li><li><a href='./6.html'>UI</a></li><li><a href='./7.html'>过渡效果</a></li><li><a href='./8.html'>文本效果</a></li><li><a href='./9.html'>2D</a></li><li><a href='./10.html'>3D</a></li><li></li>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+<div class="col-xs-8">
+	<nav>
+		<ul class="pager">
+			<li class='previous'><a href='5.html'>&larr; 多列</a></li>
+		<li class='next'><a href='7.html'>过渡效果&rarr;</a></li>
+		</ul>
+	</nav>
+			<div class="row"><div class="col-xs-12">UI<br>====<br><br>增加了一些新的用户界面特性来调整元素尺寸，框尺寸和外边框。<br><br>在本章中，您将了解以下的用户界面属性：<br><br>* resize<br>* box-sizing<br>* outline-offset<br><br>**注意：**Firefox、Chrome 以及 Safari 支持 resize 属性。<br>Internet Explorer、Chrome、Safari 以及 Opera 支持 box-sizing 属性。Firefox 需要前缀 -moz-。<br>所有主流浏览器都支持 outline-offset 属性，除了 Internet Explorer。<br><br>## resize<br><br>resize 属性指定一个元素是否应该由用户去调整大小。可以使用  `resize:both`， `resize:vertical` 或者 `resize:horizontal`，用来分别设置元素是可以水平、垂直调整，垂直调整，水平调整。<br><br>例子<br><br>    .div-both {<br>        border: 1px solid green;<br>        margin-top: 20px;<br>        padding: 15px 30px;<br>        width: 250px;<br>        resize: both;<br>        overflow: auto;<br>    }<br><br>    .div-horizontal {<br>        border: 1px solid green;<br>        margin-top: 20px;<br>        padding: 15px 30px;<br>        width: 250px;<br>        resize: horizontal;<br>        overflow: auto;<br>    }<br><br>    .div-vertical {<br>        border: 1px solid green;<br>        margin-top: 20px;<br>        padding: 15px 30px;<br>        width: 250px;<br>        resize: vertical;<br>        overflow: auto;<br>    }<br><br>## box-sizing<br><br>box-sizing 允许您以确切的方式定义适应某个区域的具体内容<br><br>例子<br><br>    .box-sizing {<br>        box-sizing: border-box;<br>        -moz-box-sizing: border-box; /* Firefox */<br>        width: 50%;<br>        border: 1em solid red;<br>        float: left;<br>    }<br><br>## outline-offset<br><br>outline-offset 属性对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓。<br><br>轮廓与边框有两点不同：<br><br>* 轮廓不占用空间<br>* 轮廓可能是非矩形<br><br>例子<br><br>    .outline-offset {<br>        width: 180px;<br>        height: 80px;<br>        border: 1px solid red;<br>        outline: 1px solid green;<br>        outline-offset: 20px;<br>    }<br><br>## 属性<br><br><table class="reference"> <tbody><tr> <th width="28%" align="left">属性</th> <th width="67%" align="left">说明</th> <th width="5%" align="left">CSS</th> </tr> <tr> <td><a href="#">appearance</a></td> <td>允许您使一个元素的外观像一个标准的用户界面元素</td> <td>3</td> </tr> <tr> <td><a href="#">box-sizing</a></td> <td>允许你以适应区域而用某种方式定义某些元素</td> <td>3</td> </tr> <tr> <td><a href="#">icon</a></td> <td>Provides the author the ability to style an element with an iconic equivalent</td> <td>3</td> </tr> <tr> <td><a href="#">nav-down</a></td> <td>指定在何处使用箭头向下导航键时进行导航</td> <td>3</td> </tr> <tr> <td><a href="#">nav-index</a></td> <td>指定一个元素的Tab的顺序</td> <td>3</td> </tr> <tr> <td><a href="#">nav-left</a></td> <td>指定在何处使用左侧的箭头导航键进行导航</td> <td>3</td> </tr> <tr> <td><a href="#">nav-right</a></td> <td>指定在何处使用右侧的箭头导航键进行导航</td> <td>3</td> </tr> <tr> <td><a href="#">nav-up</a></td> <td>指定在何处使用箭头向上导航键时进行导航</td> <td>3</td> </tr> <tr> <td><a href="#">outline-offset</a></td> <td>外轮廓修饰并绘制超出边框的边缘</td> <td>3</td> </tr> <tr> <td><a href="#">resize</a></td> <td>指定一个元素是否是由用户调整大小</td> <td>3</td> </tr> </tbody></table><br><br>## 源码<br><br>本文中所用例子源码参见<br><https://github.com/waylau/css3-tutorial> 中 `samples` 目录下的 userinterface.html</div></div>
+			<nav>
+				<ul class="pager">
+				<li class='previous'><a href='5.html'>&larr; 多列</a></li>
+			<li class='next'><a href='7.html'>过渡效果&rarr;</a></li>
+				</ul>
+			</nav>
+</div>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+			<!-- /.row -->
+			  <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; 小龙软件工作室 2016 粤icp备16103410</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
