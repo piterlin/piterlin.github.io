@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+<meta name="360-site-verification" content="cabcfb5a0f4c0d28d604e8a69e6c0cdb" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="baidu-site-verification" content="HknqsD2zhn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ECMAScript 6入门-编码助手网</title>
+      <meta content="为编码人员提供在线文档、模板等帮助，提升解决问题效率" name="description">
+			<meta content="ECMAScript 6入门 Java, spring, tomcat, servlet, jsp, api doc, bootstrap" name="keywords">
+<meta name="sogou_site_verification" content="42nApEZFKO"/>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?dd1361ca20a10cc161e72d4bc4fef6df";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">编码助手网</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+										<li>
+                        <a href="/template.html">模板</a>
+                    </li>
+										<li>
+												<a href="/doc.html">文档</a>
+										</li>
+                    <li>
+                        <a href="/contact.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<div class="row">
+					<div class="col-xs-4">
+						<h4>ECMAScript 6入门</h4>
+						<h6>感谢Ruan YiFeng提供内容</h6>
+<ul><li><a href='./0.html'>前言</a></li><li><a href='./1.html'>ECMAScript 6简介</a></li><li><a href='./2.html'>let和const命令</a></li><li><a href='./3.html'>变量的解构赋值</a></li><li><a href='./4.html'>字符串的扩展</a></li><li><a href='./5.html'>正则的扩展</a></li><li><a href='./6.html'>数值的扩展</a></li><li><a href='./7.html'>数组的扩展</a></li><li><a href='./8.html'>函数的扩展</a></li><li><a href='./9.html'>对象的扩展</a></li><li><a href='./10.html'>Symbol</a></li><li><a href='./11.html'>Proxy和Reflect</a></li><li><a href='./12.html'>Set和Map数据结构</a></li><li><a href='./13.html'>Iterator和for...of循环</a></li><li><a href='./14.html'>Generator函数</a></li><li><a href='./15.html'>Promise对象</a></li><li><a href='./16.html'>异步操作和Async函数</a></li><li><a href='./17.html'>Class</a></li><li><a href='./18.html'>Decorator</a></li><li><a href='./19.html'>Module</a></li><li><a href='./20.html'>编程风格</a></li><li><a href='./21.html'>读懂规格</a></li><li><a href='./22.html'>二进制数组</a></li><li><a href='./23.html'>SIMD</a></li><li><a href='./24.html'>参考链接</a></li><li></li>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+<div class="col-xs-8">
+	<nav>
+		<ul class="pager">
+			<li class='previous'><a href='19.html'>&larr; Module</a></li>
+		<li class='next'><a href='21.html'>读懂规格&rarr;</a></li>
+		</ul>
+	</nav>
+			<div class="row"><div class="col-xs-12"># 编程风格<br><br>本章探讨如何将ES6的新语法，运用到编码实践之中，与传统的JavaScript语法结合在一起，写出合理的、易于阅读和维护的代码。<br><br>多家公司和组织已经公开了它们的风格规范，具体可参阅[jscs.info](http://jscs.info/)，下面的内容主要参考了[Airbnb](https://github.com/airbnb/javascript)的JavaScript风格规范。<br><br>## 块级作用域<br><br>**（1）let取代var**<br><br>ES6提出了两个新的声明变量的命令：`let`和`const`。其中，`let`完全可以取代`var`，因为两者语义相同，而且`let`没有副作用。<br><br>```javascript<br>'use strict';<br><br>if (true) {<br>  let x = 'hello';<br>}<br><br>for (let i = 0; i < 10; i++) {<br>  console.log(i);<br>}<br>```<br><br>上面代码如果用`var`替代`let`，实际上就声明了两个全局变量，这显然不是本意。变量应该只在其声明的代码块内有效，`var`命令做不到这一点。<br><br>`var`命令存在变量提升效用，`let`命令没有这个问题。<br><br>```javascript<br>'use strict';<br><br>if(true) {<br>  console.log(x); // ReferenceError<br>  let x = 'hello';<br>}<br>```<br><br>上面代码如果使用`var`替代`let`，`console.log`那一行就不会报错，而是会输出`undefined`，因为变量声明提升到代码块的头部。这违反了变量先声明后使用的原则。<br><br>所以，建议不再使用`var`命令，而是使用`let`命令取代。<br><br>**（2）全局常量和线程安全**<br><br>在`let`和`const`之间，建议优先使用`const`，尤其是在全局环境，不应该设置变量，只应设置常量。这符合函数式编程思想，有利于将来的分布式运算。<br><br>```javascript<br>// bad<br>var a = 1, b = 2, c = 3;<br><br>// good<br>const a = 1;<br>const b = 2;<br>const c = 3;<br><br>// best<br>const [a, b, c] = [1, 2, 3];<br>```<br><br>`const`声明常量还有两个好处，一是阅读代码的人立刻会意识到不应该修改这个值，二是防止了无意间修改变量值所导致的错误。<br><br>所有的函数都应该设置为常量。<br><br>长远来看，JavaScript可能会有多线程的实现（比如Intel的River Trail那一类的项目），这时`let`表示的变量，只应出现在单线程运行的代码中，不能是多线程共享的，这样有利于保证线程安全。<br><br>## 字符串<br><br>静态字符串一律使用单引号或反引号，不使用双引号。动态字符串使用反引号。<br><br>```javascript<br>// bad<br>const a = "foobar";<br>const b = 'foo' + a + 'bar';<br><br>// acceptable<br>const c = `foobar`;<br><br>// good<br>const a = 'foobar';<br>const b = `foo${a}bar`;<br>const c = 'foobar';<br>```<br><br>## 解构赋值<br><br>使用数组成员对变量赋值时，优先使用解构赋值。<br><br>```javascript<br>const arr = [1, 2, 3, 4];<br><br>// bad<br>const first = arr[0];<br>const second = arr[1];<br><br>// good<br>const [first, second] = arr;<br>```<br><br>函数的参数如果是对象的成员，优先使用解构赋值。<br><br>```javascript<br>// bad<br>function getFullName(user) {<br>  const firstName = user.firstName;<br>  const lastName = user.lastName;<br>}<br><br>// good<br>function getFullName(obj) {<br>  const { firstName, lastName } = obj;<br>}<br><br>// best<br>function getFullName({ firstName, lastName }) {<br>}<br>```<br><br>如果函数返回多个值，优先使用对象的解构赋值，而不是数组的解构赋值。这样便于以后添加返回值，以及更改返回值的顺序。<br><br>```javascript<br>// bad<br>function processInput(input) {<br>  return [left, right, top, bottom];<br>}<br><br>// good<br>function processInput(input) {<br>  return { left, right, top, bottom };<br>}<br><br>const { left, right } = processInput(input);<br>```<br><br>## 对象<br><br>单行定义的对象，最后一个成员不以逗号结尾。多行定义的对象，最后一个成员以逗号结尾。<br><br>```javascript<br>// bad<br>const a = { k1: v1, k2: v2, };<br>const b = {<br>  k1: v1,<br>  k2: v2<br>};<br><br>// good<br>const a = { k1: v1, k2: v2 };<br>const b = {<br>  k1: v1,<br>  k2: v2,<br>};<br>```<br><br>对象尽量静态化，一旦定义，就不得随意添加新的属性。如果添加属性不可避免，要使用`Object.assign`方法。<br><br>```javascript<br>// bad<br>const a = {};<br>a.x = 3;<br><br>// if reshape unavoidable<br>const a = {};<br>Object.assign(a, { x: 3 });<br><br>// good<br>const a = { x: null };<br>a.x = 3;<br>```<br><br>如果对象的属性名是动态的，可以在创造对象的时候，使用属性表达式定义。<br><br>```javascript<br>// bad<br>const obj = {<br>  id: 5,<br>  name: 'San Francisco',<br>};<br>obj[getKey('enabled')] = true;<br><br>// good<br>const obj = {<br>  id: 5,<br>  name: 'San Francisco',<br>  [getKey('enabled')]: true,<br>};<br>```<br><br>上面代码中，对象`obj`的最后一个属性名，需要计算得到。这时最好采用属性表达式，在新建`obj`的时候，将该属性与其他属性定义在一起。这样一来，所有属性就在一个地方定义了。<br><br>另外，对象的属性和方法，尽量采用简洁表达法，这样易于描述和书写。<br><br>```javascript<br>var ref = 'some value';<br><br>// bad<br>const atom = {<br>  ref: ref,<br><br>  value: 1,<br><br>  addValue: function (value) {<br>    return atom.value + value;<br>  },<br>};<br><br>// good<br>const atom = {<br>  ref,<br><br>  value: 1,<br><br>  addValue(value) {<br>    return atom.value + value;<br>  },<br>};<br>```<br><br>## 数组<br><br>使用扩展运算符（...）拷贝数组。<br><br>```javascript<br>// bad<br>const len = items.length;<br>const itemsCopy = [];<br>let i;<br><br>for (i = 0; i < len; i++) {<br>  itemsCopy[i] = items[i];<br>}<br><br>// good<br>const itemsCopy = [...items];<br>```<br><br>使用Array.from方法，将类似数组的对象转为数组。<br><br>```javascript<br>const foo = document.querySelectorAll('.foo');<br>const nodes = Array.from(foo);<br>```<br><br>## 函数<br><br>立即执行函数可以写成箭头函数的形式。<br><br>```javascript<br>(() => {<br>  console.log('Welcome to the Internet.');<br>})();<br>```<br><br>那些需要使用函数表达式的场合，尽量用箭头函数代替。因为这样更简洁，而且绑定了this。<br><br>```javascript<br>// bad<br>[1, 2, 3].map(function (x) {<br>  return x * x;<br>});<br><br>// good<br>[1, 2, 3].map((x) => {<br>  return x * x;<br>});<br><br>// best<br>[1, 2, 3].map(x => x * x);<br>```<br><br>箭头函数取代`Function.prototype.bind`，不应再用self/\_this/that绑定 this。<br><br>```javascript<br>// bad<br>const self = this;<br>const boundMethod = function(...params) {<br>  return method.apply(self, params);<br>}<br><br>// acceptable<br>const boundMethod = method.bind(this);<br><br>// best<br>const boundMethod = (...params) => method.apply(this, params);<br>```<br><br>简单的、单行的、不会复用的函数，建议采用箭头函数。如果函数体较为复杂，行数较多，还是应该采用传统的函数写法。<br><br>所有配置项都应该集中在一个对象，放在最后一个参数，布尔值不可以直接作为参数。<br><br>```javascript<br>// bad<br>function divide(a, b, option = false ) {<br>}<br><br>// good<br>function divide(a, b, { option = false } = {}) {<br>}<br>```<br><br>不要在函数体内使用arguments变量，使用rest运算符（...）代替。因为rest运算符显式表明你想要获取参数，而且arguments是一个类似数组的对象，而rest运算符可以提供一个真正的数组。<br><br>```javascript<br>// bad<br>function concatenateAll() {<br>  const args = Array.prototype.slice.call(arguments);<br>  return args.join('');<br>}<br><br>// good<br>function concatenateAll(...args) {<br>  return args.join('');<br>}<br>```<br><br>使用默认值语法设置函数参数的默认值。<br><br>```javascript<br>// bad<br>function handleThings(opts) {<br>  opts = opts || {};<br>}<br><br>// good<br>function handleThings(opts = {}) {<br>  // ...<br>}<br>```<br><br>## Map结构<br><br>注意区分Object和Map，只有模拟现实世界的实体对象时，才使用Object。如果只是需要`key: value`的数据结构，使用Map结构。因为Map有内建的遍历机制。<br><br>```javascript<br>let map = new Map(arr);<br><br>for (let key of map.keys()) {<br>  console.log(key);<br>}<br><br>for (let value of map.values()) {<br>  console.log(value);<br>}<br><br>for (let item of map.entries()) {<br>  console.log(item[0], item[1]);<br>}<br>```<br><br>## Class<br><br>总是用Class，取代需要prototype的操作。因为Class的写法更简洁，更易于理解。<br><br>```javascript<br>// bad<br>function Queue(contents = []) {<br>  this._queue = [...contents];<br>}<br>Queue.prototype.pop = function() {<br>  const value = this._queue[0];<br>  this._queue.splice(0, 1);<br>  return value;<br>}<br><br>// good<br>class Queue {<br>  constructor(contents = []) {<br>    this._queue = [...contents];<br>  }<br>  pop() {<br>    const value = this._queue[0];<br>    this._queue.splice(0, 1);<br>    return value;<br>  }<br>}<br>```<br><br>使用`extends`实现继承，因为这样更简单，不会有破坏`instanceof`运算的危险。<br><br>```javascript<br>// bad<br>const inherits = require('inherits');<br>function PeekableQueue(contents) {<br>  Queue.apply(this, contents);<br>}<br>inherits(PeekableQueue, Queue);<br>PeekableQueue.prototype.peek = function() {<br>  return this._queue[0];<br>}<br><br>// good<br>class PeekableQueue extends Queue {<br>  peek() {<br>    return this._queue[0];<br>  }<br>}<br>```<br><br>## 模块<br><br>首先，Module语法是JavaScript模块的标准写法，坚持使用这种写法。使用`import`取代`require`。<br><br>```javascript<br>// bad<br>const moduleA = require('moduleA');<br>const func1 = moduleA.func1;<br>const func2 = moduleA.func2;<br><br>// good<br>import { func1, func2 } from 'moduleA';<br>```<br><br>使用`export`取代`module.exports`。<br><br>```javascript<br>// commonJS的写法<br>var React = require('react');<br><br>var Breadcrumbs = React.createClass({<br>  render() {<br>    return <nav />;<br>  }<br>});<br><br>module.exports = Breadcrumbs;<br><br>// ES6的写法<br>import React from 'react';<br><br>const Breadcrumbs = React.createClass({<br>  render() {<br>    return <nav />;<br>  }<br>});<br><br>export default Breadcrumbs<br>```<br><br>如果模块只有一个输出值，就使用`export default`，如果模块有多个输出值，就不使用`export default`，不要`export default`与普通的`export`同时使用。<br><br>不要在模块输入中使用通配符。因为这样可以确保你的模块之中，有一个默认输出（export default）。<br><br>```javascript<br>// bad<br>import * as myObject './importModule';<br><br>// good<br>import myObject from './importModule';<br>```<br><br>如果模块默认输出一个函数，函数名的首字母应该小写。<br><br>```javascript<br>function makeStyleGuide() {<br>}<br><br>export default makeStyleGuide;<br>```<br><br>如果模块默认输出一个对象，对象名的首字母应该大写。<br><br>```javascript<br>const StyleGuide = {<br>  es6: {<br>  }<br>};<br><br>export default StyleGuide;<br>```<br><br>## ESLint的使用<br><br>ESLint是一个语法规则和代码风格的检查工具，可以用来保证写出语法正确、风格统一的代码。<br><br>首先，安装ESLint。<br><br>```bash<br>$ npm i -g eslint<br>```<br><br>然后，安装Airbnb语法规则。<br><br>```bash<br>$ npm i -g eslint-config-airbnb<br>```<br><br>最后，在项目的根目录下新建一个`.eslintrc`文件，配置ESLint。<br><br>```javascript<br>{<br>  "extends": "eslint-config-airbnb"<br>}<br>```<br><br>现在就可以检查，当前项目的代码是否符合预设的规则。<br><br>`index.js`文件的代码如下。<br><br>```javascript<br>var unusued = 'I have no purpose!';<br><br>function greet() {<br>    var message = 'Hello, World!';<br>    alert(message);<br>}<br><br>greet();<br>```<br><br>使用ESLint检查这个文件。<br><br>```bash<br>$ eslint index.js<br>index.js<br>  1:5  error  unusued is defined but never used                 no-unused-vars<br>  4:5  error  Expected indentation of 2 characters but found 4  indent<br>  5:5  error  Expected indentation of 2 characters but found 4  indent<br><br>✖ 3 problems (3 errors, 0 warnings)<br>```<br><br>上面代码说明，原文件有三个错误，一个是定义了变量，却没有使用，另外两个是行首缩进为4个空格，而不是规定的2个空格。<br></div></div>
+			<nav>
+				<ul class="pager">
+				<li class='previous'><a href='19.html'>&larr; Module</a></li>
+			<li class='next'><a href='21.html'>读懂规格&rarr;</a></li>
+				</ul>
+			</nav>
+</div>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+			<!-- /.row -->
+			  <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; 小龙软件工作室 2016 粤icp备16103410</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

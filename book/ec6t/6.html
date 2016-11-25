@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+<meta name="360-site-verification" content="cabcfb5a0f4c0d28d604e8a69e6c0cdb" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="baidu-site-verification" content="HknqsD2zhn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ECMAScript 6入门-编码助手网</title>
+      <meta content="为编码人员提供在线文档、模板等帮助，提升解决问题效率" name="description">
+			<meta content="ECMAScript 6入门 Java, spring, tomcat, servlet, jsp, api doc, bootstrap" name="keywords">
+<meta name="sogou_site_verification" content="42nApEZFKO"/>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?dd1361ca20a10cc161e72d4bc4fef6df";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">编码助手网</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+										<li>
+                        <a href="/template.html">模板</a>
+                    </li>
+										<li>
+												<a href="/doc.html">文档</a>
+										</li>
+                    <li>
+                        <a href="/contact.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<div class="row">
+					<div class="col-xs-4">
+						<h4>ECMAScript 6入门</h4>
+						<h6>感谢Ruan YiFeng提供内容</h6>
+<ul><li><a href='./0.html'>前言</a></li><li><a href='./1.html'>ECMAScript 6简介</a></li><li><a href='./2.html'>let和const命令</a></li><li><a href='./3.html'>变量的解构赋值</a></li><li><a href='./4.html'>字符串的扩展</a></li><li><a href='./5.html'>正则的扩展</a></li><li><a href='./6.html'>数值的扩展</a></li><li><a href='./7.html'>数组的扩展</a></li><li><a href='./8.html'>函数的扩展</a></li><li><a href='./9.html'>对象的扩展</a></li><li><a href='./10.html'>Symbol</a></li><li><a href='./11.html'>Proxy和Reflect</a></li><li><a href='./12.html'>Set和Map数据结构</a></li><li><a href='./13.html'>Iterator和for...of循环</a></li><li><a href='./14.html'>Generator函数</a></li><li><a href='./15.html'>Promise对象</a></li><li><a href='./16.html'>异步操作和Async函数</a></li><li><a href='./17.html'>Class</a></li><li><a href='./18.html'>Decorator</a></li><li><a href='./19.html'>Module</a></li><li><a href='./20.html'>编程风格</a></li><li><a href='./21.html'>读懂规格</a></li><li><a href='./22.html'>二进制数组</a></li><li><a href='./23.html'>SIMD</a></li><li><a href='./24.html'>参考链接</a></li><li></li>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+<div class="col-xs-8">
+	<nav>
+		<ul class="pager">
+			<li class='previous'><a href='5.html'>&larr; 正则的扩展</a></li>
+		<li class='next'><a href='7.html'>数组的扩展&rarr;</a></li>
+		</ul>
+	</nav>
+			<div class="row"><div class="col-xs-12"># 数值的扩展<br><br>## 二进制和八进制表示法<br><br>ES6提供了二进制和八进制数值的新的写法，分别用前缀`0b`（或`0B`）和`0o`（或`0O`）表示。<br><br>```javascript<br>0b111110111 === 503 // true<br>0o767 === 503 // true<br>```<br><br>从ES5开始，在严格模式之中，八进制就不再允许使用前缀`0`表示，ES6进一步明确，要使用前缀`0o`表示。<br><br>```javascript<br>// 非严格模式<br>(function(){<br>  console.log(0o11 === 011);<br>})() // true<br><br>// 严格模式<br>(function(){<br>  'use strict';<br>  console.log(0o11 === 011);<br>})() // Uncaught SyntaxError: Octal literals are not allowed in strict mode.<br>```<br><br>如果要将`0b`和`0o`前缀的字符串数值转为十进制，要使用`Number`方法。<br><br>```javascript<br>Number('0b111')  // 7<br>Number('0o10')  // 8<br>```<br><br>## Number.isFinite(), Number.isNaN()<br><br>ES6在Number对象上，新提供了`Number.isFinite()`和`Number.isNaN()`两个方法。<br><br>`Number.isFinite()`用来检查一个数值是否为有限的（finite）。<br><br>```javascript<br>Number.isFinite(15); // true<br>Number.isFinite(0.8); // true<br>Number.isFinite(NaN); // false<br>Number.isFinite(Infinity); // false<br>Number.isFinite(-Infinity); // false<br>Number.isFinite('foo'); // false<br>Number.isFinite('15'); // false<br>Number.isFinite(true); // false<br>```<br><br>ES5可以通过下面的代码，部署`Number.isFinite`方法。<br><br>```javascript<br>(function (global) {<br>  var global_isFinite = global.isFinite;<br><br>  Object.defineProperty(Number, 'isFinite', {<br>    value: function isFinite(value) {<br>      return typeof value === 'number' && global_isFinite(value);<br>    },<br>    configurable: true,<br>    enumerable: false,<br>    writable: true<br>  });<br>})(this);<br>```<br><br>`Number.isNaN()`用来检查一个值是否为`NaN`。<br><br>```javascript<br>Number.isNaN(NaN) // true<br>Number.isNaN(15) // false<br>Number.isNaN('15') // false<br>Number.isNaN(true) // false<br>Number.isNaN(9/NaN) // true<br>Number.isNaN('true'/0) // true<br>Number.isNaN('true'/'true') // true<br>```<br><br>ES5通过下面的代码，部署`Number.isNaN()`。<br><br>```javascript<br>(function (global) {<br>  var global_isNaN = global.isNaN;<br><br>  Object.defineProperty(Number, 'isNaN', {<br>    value: function isNaN(value) {<br>      return typeof value === 'number' && global_isNaN(value);<br>    },<br>    configurable: true,<br>    enumerable: false,<br>    writable: true<br>  });<br>})(this);<br>```<br><br>它们与传统的全局方法`isFinite()`和`isNaN()`的区别在于，传统方法先调用`Number()`将非数值的值转为数值，再进行判断，而这两个新方法只对数值有效，非数值一律返回`false`。<br><br>```javascript<br>isFinite(25) // true<br>isFinite("25") // true<br>Number.isFinite(25) // true<br>Number.isFinite("25") // false<br><br>isNaN(NaN) // true<br>isNaN("NaN") // true<br>Number.isNaN(NaN) // true<br>Number.isNaN("NaN") // false<br>```<br><br>## Number.parseInt(), Number.parseFloat()<br><br>ES6将全局方法`parseInt()`和`parseFloat()`，移植到Number对象上面，行为完全保持不变。<br><br>```javascript<br>// ES5的写法<br>parseInt('12.34') // 12<br>parseFloat('123.45#') // 123.45<br><br>// ES6的写法<br>Number.parseInt('12.34') // 12<br>Number.parseFloat('123.45#') // 123.45<br>```<br><br>这样做的目的，是逐步减少全局性方法，使得语言逐步模块化。<br><br>```javascript<br>Number.parseInt === parseInt // true<br>Number.parseFloat === parseFloat // true<br>```<br><br>## Number.isInteger()<br><br>`Number.isInteger()`用来判断一个值是否为整数。需要注意的是，在JavaScript内部，整数和浮点数是同样的储存方法，所以3和3.0被视为同一个值。<br><br>```javascript<br>Number.isInteger(25) // true<br>Number.isInteger(25.0) // true<br>Number.isInteger(25.1) // false<br>Number.isInteger("15") // false<br>Number.isInteger(true) // false<br>```<br><br>ES5可以通过下面的代码，部署`Number.isInteger()`。<br><br>```javascript<br>(function (global) {<br>  var floor = Math.floor,<br>    isFinite = global.isFinite;<br><br>  Object.defineProperty(Number, 'isInteger', {<br>    value: function isInteger(value) {<br>      return typeof value === 'number' && isFinite(value) &&<br>        value > -9007199254740992 && value < 9007199254740992 &&<br>        floor(value) === value;<br>    },<br>    configurable: true,<br>    enumerable: false,<br>    writable: true<br>  });<br>})(this);<br>```<br><br>## Number.EPSILON<br><br>ES6在Number对象上面，新增一个极小的常量`Number.EPSILON`。<br><br>```javascript<br>Number.EPSILON<br>// 2.220446049250313e-16<br>Number.EPSILON.toFixed(20)<br>// '0.00000000000000022204'<br>```<br><br>引入一个这么小的量的目的，在于为浮点数计算，设置一个误差范围。我们知道浮点数计算是不精确的。<br><br>```javascript<br>0.1 + 0.2<br>// 0.30000000000000004<br><br>0.1 + 0.2 - 0.3<br>// 5.551115123125783e-17<br><br>5.551115123125783e-17.toFixed(20)<br>// '0.00000000000000005551'<br>```<br><br>但是如果这个误差能够小于`Number.EPSILON`，我们就可以认为得到了正确结果。<br><br>```javascript<br>5.551115123125783e-17 < Number.EPSILON<br>// true<br>```<br><br>因此，`Number.EPSILON`的实质是一个可以接受的误差范围。<br><br>```javascript<br>function withinErrorMargin (left, right) {<br>  return Math.abs(left - right) < Number.EPSILON;<br>}<br>withinErrorMargin(0.1 + 0.2, 0.3)<br>// true<br>withinErrorMargin(0.2 + 0.2, 0.3)<br>// false<br>```<br><br>上面的代码为浮点数运算，部署了一个误差检查函数。<br><br>## 安全整数和Number.isSafeInteger()<br><br>JavaScript能够准确表示的整数范围在`-2^53`到`2^53`之间（不含两个端点），超过这个范围，无法精确表示这个值。<br><br>```javascript<br>Math.pow(2, 53) // 9007199254740992<br><br>9007199254740992  // 9007199254740992<br>9007199254740993  // 9007199254740992<br><br>Math.pow(2, 53) === Math.pow(2, 53) + 1<br>// true<br>```<br><br>上面代码中，超出2的53次方之后，一个数就不精确了。<br><br>ES6引入了`Number.MAX_SAFE_INTEGER`和`Number.MIN_SAFE_INTEGER`这两个常量，用来表示这个范围的上下限。<br><br>```javascript<br>Number.MAX_SAFE_INTEGER === Math.pow(2, 53) - 1<br>// true<br>Number.MAX_SAFE_INTEGER === 9007199254740991<br>// true<br><br>Number.MIN_SAFE_INTEGER === -Number.MAX_SAFE_INTEGER<br>// true<br>Number.MIN_SAFE_INTEGER === -9007199254740991<br>// true<br>```<br><br>上面代码中，可以看到JavaScript能够精确表示的极限。<br><br>`Number.isSafeInteger()`则是用来判断一个整数是否落在这个范围之内。<br><br>```javascript<br>Number.isSafeInteger('a') // false<br>Number.isSafeInteger(null) // false<br>Number.isSafeInteger(NaN) // false<br>Number.isSafeInteger(Infinity) // false<br>Number.isSafeInteger(-Infinity) // false<br><br>Number.isSafeInteger(3) // true<br>Number.isSafeInteger(1.2) // false<br>Number.isSafeInteger(9007199254740990) // true<br>Number.isSafeInteger(9007199254740992) // false<br><br>Number.isSafeInteger(Number.MIN_SAFE_INTEGER - 1) // false<br>Number.isSafeInteger(Number.MIN_SAFE_INTEGER) // true<br>Number.isSafeInteger(Number.MAX_SAFE_INTEGER) // true<br>Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1) // false<br>```<br><br>这个函数的实现很简单，就是跟安全整数的两个边界值比较一下。<br><br>```javascript<br>Number.isSafeInteger = function (n) {<br>  return (typeof n === 'number' &&<br>    Math.round(n) === n &&<br>    Number.MIN_SAFE_INTEGER <= n &&<br>    n <= Number.MAX_SAFE_INTEGER);<br>}<br>```<br><br>实际使用这个函数时，需要注意。验证运算结果是否落在安全整数的范围内，不要只验证运算结果，而要同时验证参与运算的每个值。<br><br>```javascript<br>Number.isSafeInteger(9007199254740993)<br>// false<br>Number.isSafeInteger(990)<br>// true<br>Number.isSafeInteger(9007199254740993 - 990)<br>// true<br>9007199254740993 - 990<br>// 返回结果 9007199254740002<br>// 正确答案应该是 9007199254740003<br>```<br><br>上面代码中，`9007199254740993`不是一个安全整数，但是`Number.isSafeInteger`会返回结果，显示计算结果是安全的。这是因为，这个数超出了精度范围，导致在计算机内部，以`9007199254740992`的形式储存。<br><br>```javascript<br>9007199254740993 === 9007199254740992<br>// true<br>```<br><br>所以，如果只验证运算结果是否为安全整数，很可能得到错误结果。下面的函数可以同时验证两个运算数和运算结果。<br><br>```javascript<br>function trusty (left, right, result) {<br>  if (<br>    Number.isSafeInteger(left) &&<br>    Number.isSafeInteger(right) &&<br>    Number.isSafeInteger(result)<br>  ) {<br>    return result;<br>  }<br>  throw new RangeError('Operation cannot be trusted!');<br>}<br><br>trusty(9007199254740993, 990, 9007199254740993 - 990)<br>// RangeError: Operation cannot be trusted!<br><br>trusty(1, 2, 3)<br>// 3<br>```<br><br>## Math对象的扩展<br><br>ES6在Math对象上新增了17个与数学相关的方法。所有这些方法都是静态方法，只能在Math对象上调用。<br><br>### Math.trunc()<br><br>`Math.trunc`方法用于去除一个数的小数部分，返回整数部分。<br><br>```javascript<br>Math.trunc(4.1) // 4<br>Math.trunc(4.9) // 4<br>Math.trunc(-4.1) // -4<br>Math.trunc(-4.9) // -4<br>Math.trunc(-0.1234) // -0<br>```<br><br>对于非数值，`Math.trunc`内部使用`Number`方法将其先转为数值。<br><br>```javascript<br>Math.trunc('123.456')<br>// 123<br>```<br><br>对于空值和无法截取整数的值，返回NaN。<br><br>```javascript<br>Math.trunc(NaN);      // NaN<br>Math.trunc('foo');    // NaN<br>Math.trunc();         // NaN<br>```<br><br>对于没有部署这个方法的环境，可以用下面的代码模拟。<br><br>```javascript<br>Math.trunc = Math.trunc || function(x) {<br>  return x < 0 ? Math.ceil(x) : Math.floor(x);<br>};<br>```<br><br>### Math.sign()<br><br>`Math.sign`方法用来判断一个数到底是正数、负数、还是零。<br><br>它会返回五种值。<br><br>- 参数为正数，返回+1；<br>- 参数为负数，返回-1；<br>- 参数为0，返回0；<br>- 参数为-0，返回-0;<br>- 其他值，返回NaN。<br><br>```javascript<br>Math.sign(-5) // -1<br>Math.sign(5) // +1<br>Math.sign(0) // +0<br>Math.sign(-0) // -0<br>Math.sign(NaN) // NaN<br>Math.sign('foo'); // NaN<br>Math.sign();      // NaN<br>```<br><br>对于没有部署这个方法的环境，可以用下面的代码模拟。<br><br>```javascript<br>Math.sign = Math.sign || function(x) {<br>  x = +x; // convert to a number<br>  if (x === 0 || isNaN(x)) {<br>    return x;<br>  }<br>  return x > 0 ? 1 : -1;<br>};<br>```<br><br>### Math.cbrt()<br><br>`Math.cbrt`方法用于计算一个数的立方根。<br><br>```javascript<br>Math.cbrt(-1) // -1<br>Math.cbrt(0)  // 0<br>Math.cbrt(1)  // 1<br>Math.cbrt(2)  // 1.2599210498948734<br>```<br><br>对于非数值，`Math.cbrt`方法内部也是先使用`Number`方法将其转为数值。<br><br>```javascript<br>Math.cbrt('8') // 2<br>Math.cbrt('hello') // NaN<br>```<br><br>对于没有部署这个方法的环境，可以用下面的代码模拟。<br><br>```javascript<br>Math.cbrt = Math.cbrt || function(x) {<br>  var y = Math.pow(Math.abs(x), 1/3);<br>  return x < 0 ? -y : y;<br>};<br>```<br><br>### Math.clz32()<br><br>JavaScript的整数使用32位二进制形式表示，`Math.clz32`方法返回一个数的32位无符号整数形式有多少个前导0。<br><br>```javascript<br>Math.clz32(0) // 32<br>Math.clz32(1) // 31<br>Math.clz32(1000) // 22<br>Math.clz32(0b01000000000000000000000000000000) // 1<br>Math.clz32(0b00100000000000000000000000000000) // 2<br>```<br><br>上面代码中，0的二进制形式全为0，所以有32个前导0；1的二进制形式是`0b1`，只占1位，所以32位之中有31个前导0；1000的二进制形式是`0b1111101000`，一共有10位，所以32位之中有22个前导0。<br><br>`clz32`这个函数名就来自”count leading zero bits in 32-bit binary representations of a number“（计算32位整数的前导0）的缩写。<br><br>左移运算符（`<<`）与`Math.clz32`方法直接相关。<br><br>```javascript<br>Math.clz32(0) // 32<br>Math.clz32(1) // 31<br>Math.clz32(1 << 1) // 30<br>Math.clz32(1 << 2) // 29<br>Math.clz32(1 << 29) // 2<br>```<br><br>对于小数，`Math.clz32`方法只考虑整数部分。<br><br>```javascript<br>Math.clz32(3.2) // 30<br>Math.clz32(3.9) // 30<br>```<br><br>对于空值或其他类型的值，`Math.clz32`方法会将它们先转为数值，然后再计算。<br><br>```javascript<br>Math.clz32() // 32<br>Math.clz32(NaN) // 32<br>Math.clz32(Infinity) // 32<br>Math.clz32(null) // 32<br>Math.clz32('foo') // 32<br>Math.clz32([]) // 32<br>Math.clz32({}) // 32<br>Math.clz32(true) // 31<br>```<br><br>### Math.imul()<br><br>`Math.imul`方法返回两个数以32位带符号整数形式相乘的结果，返回的也是一个32位的带符号整数。<br><br>```javascript<br>Math.imul(2, 4)   // 8<br>Math.imul(-1, 8)  // -8<br>Math.imul(-2, -2) // 4<br>```<br><br>如果只考虑最后32位，大多数情况下，`Math.imul(a, b)`与`a * b`的结果是相同的，即该方法等同于`(a * b)|0`的效果（超过32位的部分溢出）。之所以需要部署这个方法，是因为JavaScript有精度限制，超过2的53次方的值无法精确表示。这就是说，对于那些很大的数的乘法，低位数值往往都是不精确的，`Math.imul`方法可以返回正确的低位数值。<br><br>```javascript<br>(0x7fffffff * 0x7fffffff)|0 // 0<br>```<br><br>上面这个乘法算式，返回结果为0。但是由于这两个二进制数的最低位都是1，所以这个结果肯定是不正确的，因为根据二进制乘法，计算结果的二进制最低位应该也是1。这个错误就是因为它们的乘积超过了2的53次方，JavaScript无法保存额外的精度，就把低位的值都变成了0。`Math.imul`方法可以返回正确的值1。<br><br>```javascript<br>Math.imul(0x7fffffff, 0x7fffffff) // 1<br>```<br><br>### Math.fround()<br><br>Math.fround方法返回一个数的单精度浮点数形式。<br><br>```javascript<br>Math.fround(0)     // 0<br>Math.fround(1)     // 1<br>Math.fround(1.337) // 1.3370000123977661<br>Math.fround(1.5)   // 1.5<br>Math.fround(NaN)   // NaN<br>```<br><br>对于整数来说，`Math.fround`方法返回结果不会有任何不同，区别主要是那些无法用64个二进制位精确表示的小数。这时，`Math.fround`方法会返回最接近这个小数的单精度浮点数。<br><br>对于没有部署这个方法的环境，可以用下面的代码模拟。<br><br>```javascript<br>Math.fround = Math.fround || function(x) {<br>  return new Float32Array([x])[0];<br>};<br>```<br><br>### Math.hypot()<br><br>`Math.hypot`方法返回所有参数的平方和的平方根。<br><br>```javascript<br>Math.hypot(3, 4);        // 5<br>Math.hypot(3, 4, 5);     // 7.0710678118654755<br>Math.hypot();            // 0<br>Math.hypot(NaN);         // NaN<br>Math.hypot(3, 4, 'foo'); // NaN<br>Math.hypot(3, 4, '5');   // 7.0710678118654755<br>Math.hypot(-3);          // 3<br>```<br><br>上面代码中，3的平方加上4的平方，等于5的平方。<br><br>如果参数不是数值，`Math.hypot`方法会将其转为数值。只要有一个参数无法转为数值，就会返回NaN。<br><br>### 对数方法<br><br>ES6新增了4个对数相关方法。<br><br>**（1） Math.expm1()**<br><br>`Math.expm1(x)`返回e<sup>x</sup> - 1，即`Math.exp(x) - 1`。<br><br>```javascript<br>Math.expm1(-1) // -0.6321205588285577<br>Math.expm1(0)  // 0<br>Math.expm1(1)  // 1.718281828459045<br>```<br><br>对于没有部署这个方法的环境，可以用下面的代码模拟。<br><br>```javascript<br>Math.expm1 = Math.expm1 || function(x) {<br>  return Math.exp(x) - 1;<br>};<br>```<br><br>**（2）Math.log1p()**<br><br>`Math.log1p(x)`方法返回`1 + x`的自然对数，即`Math.log(1 + x)`。如果`x`小于-1，返回`NaN`。<br><br>```javascript<br>Math.log1p(1)  // 0.6931471805599453<br>Math.log1p(0)  // 0<br>Math.log1p(-1) // -Infinity<br>Math.log1p(-2) // NaN<br>```<br><br>对于没有部署这个方法的环境，可以用下面的代码模拟。<br><br>```javascript<br>Math.log1p = Math.log1p || function(x) {<br>  return Math.log(1 + x);<br>};<br>```<br><br>**（3）Math.log10()**<br><br>`Math.log10(x)`返回以10为底的`x`的对数。如果`x`小于0，则返回NaN。<br><br>```javascript<br>Math.log10(2)      // 0.3010299956639812<br>Math.log10(1)      // 0<br>Math.log10(0)      // -Infinity<br>Math.log10(-2)     // NaN<br>Math.log10(100000) // 5<br>```<br><br>对于没有部署这个方法的环境，可以用下面的代码模拟。<br><br>```javascript<br>Math.log10 = Math.log10 || function(x) {<br>  return Math.log(x) / Math.LN10;<br>};<br>```<br><br>**（4）Math.log2()**<br><br>`Math.log2(x)`返回以2为底的`x`的对数。如果`x`小于0，则返回NaN。<br><br>```javascript<br>Math.log2(3)       // 1.584962500721156<br>Math.log2(2)       // 1<br>Math.log2(1)       // 0<br>Math.log2(0)       // -Infinity<br>Math.log2(-2)      // NaN<br>Math.log2(1024)    // 10<br>Math.log2(1 << 29) // 29<br>```<br><br>对于没有部署这个方法的环境，可以用下面的代码模拟。<br><br>```javascript<br>Math.log2 = Math.log2 || function(x) {<br>  return Math.log(x) / Math.LN2;<br>};<br>```<br><br>### 三角函数方法<br><br>ES6新增了6个三角函数方法。<br><br>- `Math.sinh(x)` 返回`x`的双曲正弦（hyperbolic sine）<br>- `Math.cosh(x)` 返回`x`的双曲余弦（hyperbolic cosine）<br>- `Math.tanh(x)` 返回`x`的双曲正切（hyperbolic tangent）<br>- `Math.asinh(x)` 返回`x`的反双曲正弦（inverse hyperbolic sine）<br>- `Math.acosh(x)` 返回`x`的反双曲余弦（inverse hyperbolic cosine）<br>- `Math.atanh(x)` 返回`x`的反双曲正切（inverse hyperbolic tangent）<br><br>## 指数运算符<br><br>ES7新增了一个指数运算符（`**`），目前Babel转码器已经支持。<br><br>```javascript<br>2 ** 2 // 4<br>2 ** 3 // 8<br>```<br><br>指数运算符可以与等号结合，形成一个新的赋值运算符（`**=`）。<br><br>```javascript<br>let a = 2;<br>a **= 2;<br>// 等同于 a = a * a;<br><br>let b = 3;<br>b **= 3;<br>// 等同于 b = b * b * b;<br>```<br></div></div>
+			<nav>
+				<ul class="pager">
+				<li class='previous'><a href='5.html'>&larr; 正则的扩展</a></li>
+			<li class='next'><a href='7.html'>数组的扩展&rarr;</a></li>
+				</ul>
+			</nav>
+</div>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+			<!-- /.row -->
+			  <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; 小龙软件工作室 2016 粤icp备16103410</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

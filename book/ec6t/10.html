@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+<meta name="360-site-verification" content="cabcfb5a0f4c0d28d604e8a69e6c0cdb" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="baidu-site-verification" content="HknqsD2zhn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ECMAScript 6入门-编码助手网</title>
+      <meta content="为编码人员提供在线文档、模板等帮助，提升解决问题效率" name="description">
+			<meta content="ECMAScript 6入门 Java, spring, tomcat, servlet, jsp, api doc, bootstrap" name="keywords">
+<meta name="sogou_site_verification" content="42nApEZFKO"/>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?dd1361ca20a10cc161e72d4bc4fef6df";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">编码助手网</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+										<li>
+                        <a href="/template.html">模板</a>
+                    </li>
+										<li>
+												<a href="/doc.html">文档</a>
+										</li>
+                    <li>
+                        <a href="/contact.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<div class="row">
+					<div class="col-xs-4">
+						<h4>ECMAScript 6入门</h4>
+						<h6>感谢Ruan YiFeng提供内容</h6>
+<ul><li><a href='./0.html'>前言</a></li><li><a href='./1.html'>ECMAScript 6简介</a></li><li><a href='./2.html'>let和const命令</a></li><li><a href='./3.html'>变量的解构赋值</a></li><li><a href='./4.html'>字符串的扩展</a></li><li><a href='./5.html'>正则的扩展</a></li><li><a href='./6.html'>数值的扩展</a></li><li><a href='./7.html'>数组的扩展</a></li><li><a href='./8.html'>函数的扩展</a></li><li><a href='./9.html'>对象的扩展</a></li><li><a href='./10.html'>Symbol</a></li><li><a href='./11.html'>Proxy和Reflect</a></li><li><a href='./12.html'>Set和Map数据结构</a></li><li><a href='./13.html'>Iterator和for...of循环</a></li><li><a href='./14.html'>Generator函数</a></li><li><a href='./15.html'>Promise对象</a></li><li><a href='./16.html'>异步操作和Async函数</a></li><li><a href='./17.html'>Class</a></li><li><a href='./18.html'>Decorator</a></li><li><a href='./19.html'>Module</a></li><li><a href='./20.html'>编程风格</a></li><li><a href='./21.html'>读懂规格</a></li><li><a href='./22.html'>二进制数组</a></li><li><a href='./23.html'>SIMD</a></li><li><a href='./24.html'>参考链接</a></li><li></li>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+<div class="col-xs-8">
+	<nav>
+		<ul class="pager">
+			<li class='previous'><a href='9.html'>&larr; 对象的扩展</a></li>
+		<li class='next'><a href='11.html'>Proxy和Reflect&rarr;</a></li>
+		</ul>
+	</nav>
+			<div class="row"><div class="col-xs-12"># Symbol<br><br>## 概述<br><br>ES5的对象属性名都是字符串，这容易造成属性名的冲突。比如，你使用了一个他人提供的对象，但又想为这个对象添加新的方法（mixin模式），新方法的名字就有可能与现有方法产生冲突。如果有一种机制，保证每个属性的名字都是独一无二的就好了，这样就从根本上防止属性名的冲突。这就是ES6引入Symbol的原因。<br><br>ES6引入了一种新的原始数据类型Symbol，表示独一无二的值。它是JavaScript语言的第七种数据类型，前六种是：Undefined、Null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。<br><br>Symbol值通过`Symbol`函数生成。这就是说，对象的属性名现在可以有两种类型，一种是原来就有的字符串，另一种就是新增的Symbol类型。凡是属性名属于Symbol类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。<br><br>```javascript<br>let s = Symbol();<br><br>typeof s<br>// "symbol"<br>```<br><br>上面代码中，变量`s`就是一个独一无二的值。`typeof`运算符的结果，表明变量`s`是Symbol数据类型，而不是字符串之类的其他类型。<br><br>注意，`Symbol`函数前不能使用`new`命令，否则会报错。这是因为生成的Symbol是一个原始类型的值，不是对象。也就是说，由于Symbol值不是对象，所以不能添加属性。基本上，它是一种类似于字符串的数据类型。<br><br>`Symbol`函数可以接受一个字符串作为参数，表示对Symbol实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分。<br><br>```javascript<br>var s1 = Symbol('foo');<br>var s2 = Symbol('bar');<br><br>s1 // Symbol(foo)<br>s2 // Symbol(bar)<br><br>s1.toString() // "Symbol(foo)"<br>s2.toString() // "Symbol(bar)"<br>```<br><br>上面代码中，`s1`和`s2`是两个Symbol值。如果不加参数，它们在控制台的输出都是`Symbol()`，不利于区分。有了参数以后，就等于为它们加上了描述，输出的时候就能够分清，到底是哪一个值。<br><br>注意，`Symbol`函数的参数只是表示对当前Symbol值的描述，因此相同参数的`Symbol`函数的返回值是不相等的。<br><br>```javascript<br>// 没有参数的情况<br>var s1 = Symbol();<br>var s2 = Symbol();<br><br>s1 === s2 // false<br><br>// 有参数的情况<br>var s1 = Symbol("foo");<br>var s2 = Symbol("foo");<br><br>s1 === s2 // false<br>```<br><br>上面代码中，`s1`和`s2`都是`Symbol`函数的返回值，而且参数相同，但是它们是不相等的。<br><br>Symbol值不能与其他类型的值进行运算，会报错。<br><br>```javascript<br>var sym = Symbol('My symbol');<br><br>"your symbol is " + sym<br>// TypeError: can't convert symbol to string<br>`your symbol is ${sym}`<br>// TypeError: can't convert symbol to string<br>```<br><br>但是，Symbol值可以显式转为字符串。<br><br>```javascript<br>var sym = Symbol('My symbol');<br><br>String(sym) // 'Symbol(My symbol)'<br>sym.toString() // 'Symbol(My symbol)'<br>```<br><br>另外，Symbol值也可以转为布尔值，但是不能转为数值。<br><br>```javascript<br>var sym = Symbol();<br>Boolean(sym) // true<br>!sym  // false<br><br>if (sym) {<br>  // ...<br>}<br><br>Number(sym) // TypeError<br>sym + 2 // TypeError<br>```<br><br>## 作为属性名的Symbol<br><br>由于每一个Symbol值都是不相等的，这意味着Symbol值可以作为标识符，用于对象的属性名，就能保证不会出现同名的属性。这对于一个对象由多个模块构成的情况非常有用，能防止某一个键被不小心改写或覆盖。<br><br>```javascript<br>var mySymbol = Symbol();<br><br>// 第一种写法<br>var a = {};<br>a[mySymbol] = 'Hello!';<br><br>// 第二种写法<br>var a = {<br>  [mySymbol]: 'Hello!'<br>};<br><br>// 第三种写法<br>var a = {};<br>Object.defineProperty(a, mySymbol, { value: 'Hello!' });<br><br>// 以上写法都得到同样结果<br>a[mySymbol] // "Hello!"<br>```<br><br>上面代码通过方括号结构和`Object.defineProperty`，将对象的属性名指定为一个Symbol值。<br><br>注意，Symbol值作为对象属性名时，不能用点运算符。<br><br>```javascript<br>var mySymbol = Symbol();<br>var a = {};<br><br>a.mySymbol = 'Hello!';<br>a[mySymbol] // undefined<br>a['mySymbol'] // "Hello!"<br>```<br><br>上面代码中，因为点运算符后面总是字符串，所以不会读取`mySymbol`作为标识名所指代的那个值，导致`a`的属性名实际上是一个字符串，而不是一个Symbol值。<br><br>同理，在对象的内部，使用Symbol值定义属性时，Symbol值必须放在方括号之中。<br><br>```javascript<br>let s = Symbol();<br><br>let obj = {<br>  [s]: function (arg) { ... }<br>};<br><br>obj[s](123);<br>```<br><br>上面代码中，如果`s`不放在方括号中，该属性的键名就是字符串`s`，而不是`s`所代表的那个Symbol值。<br><br>采用增强的对象写法，上面代码的`obj`对象可以写得更简洁一些。<br><br>```javascript<br>let obj = {<br>  [s](arg) { ... }<br>};<br>```<br><br>Symbol类型还可以用于定义一组常量，保证这组常量的值都是不相等的。<br><br>```javascript<br>log.levels = {<br>  DEBUG: Symbol('debug'),<br>  INFO: Symbol('info'),<br>  WARN: Symbol('warn')<br>};<br>log(log.levels.DEBUG, 'debug message');<br>log(log.levels.INFO, 'info message');<br>```<br><br>下面是另外一个例子。<br><br>```javascript<br>const COLOR_RED    = Symbol();<br>const COLOR_GREEN  = Symbol();<br><br>function getComplement(color) {<br>  switch (color) {<br>    case COLOR_RED:<br>      return COLOR_GREEN;<br>    case COLOR_GREEN:<br>      return COLOR_RED;<br>    default:<br>      throw new Error('Undefined color');<br>    }<br>}<br>```<br><br>常量使用Symbol值最大的好处，就是其他任何值都不可能有相同的值了，因此可以保证上面的`switch`语句会按设计的方式工作。<br><br>还有一点需要注意，Symbol值作为属性名时，该属性还是公开属性，不是私有属性。<br><br>## 实例：消除魔术字符串<br><br>魔术字符串指的是，在代码之中多次出现、与代码形成强耦合的某一个具体的字符串或者数值。风格良好的代码，应该尽量消除魔术字符串，该由含义清晰的变量代替。<br><br>```javascript<br>function getArea(shape, options) {<br>  var area = 0;<br><br>  switch (shape) {<br>    case 'Triangle': // 魔术字符串<br>      area = .5 * options.width * options.height;<br>      break;<br>    /* ... more code ... */<br>  }<br><br>  return area;<br>}<br><br>getArea('Triangle', { width: 100, height: 100 }); // 魔术字符串<br>```<br><br>上面代码中，字符串“Triangle”就是一个魔术字符串。它多次出现，与代码形成“强耦合”，不利于将来的修改和维护。<br><br>常用的消除魔术字符串的方法，就是把它写成一个变量。<br><br>```javascript<br>var shapeType = {<br>  triangle: 'Triangle'<br>};<br><br>function getArea(shape, options) {<br>  var area = 0;<br>  switch (shape) {<br>    case shapeType.triangle:<br>      area = .5 * options.width * options.height;<br>      break;<br>  }<br>  return area;<br>}<br><br>getArea(shapeType.triangle, { width: 100, height: 100 });<br>```<br><br>上面代码中，我们把“Triangle”写成`shapeType`对象的`triangle`属性，这样就消除了强耦合。<br><br>如果仔细分析，可以发现`shapeType.triangle`等于哪个值并不重要，只要确保不会跟其他`shapeType`属性的值冲突即可。因此，这里就很适合改用Symbol值。<br><br>```javascript<br>const shapeType = {<br>  triangle: Symbol()<br>};<br>```<br><br>上面代码中，除了将`shapeType.triangle`的值设为一个Symbol，其他地方都不用修改。<br><br>## 属性名的遍历<br><br>Symbol作为属性名，该属性不会出现在`for...in`、`for...of`循环中，也不会被`Object.keys()`、`Object.getOwnPropertyNames()`返回。但是，它也不是私有属性，有一个`Object.getOwnPropertySymbols`方法，可以获取指定对象的所有Symbol属性名。<br><br>`Object.getOwnPropertySymbols`方法返回一个数组，成员是当前对象的所有用作属性名的Symbol值。<br><br>```javascript<br>var obj = {};<br>var a = Symbol('a');<br>var b = Symbol('b');<br><br>obj[a] = 'Hello';<br>obj[b] = 'World';<br><br>var objectSymbols = Object.getOwnPropertySymbols(obj);<br><br>objectSymbols<br>// [Symbol(a), Symbol(b)]<br>```<br><br>下面是另一个例子，`Object.getOwnPropertySymbols`方法与`for...in`循环、`Object.getOwnPropertyNames`方法进行对比的例子。<br><br>```javascript<br>var obj = {};<br><br>var foo = Symbol("foo");<br><br>Object.defineProperty(obj, foo, {<br>  value: "foobar",<br>});<br><br>for (var i in obj) {<br>  console.log(i); // 无输出<br>}<br><br>Object.getOwnPropertyNames(obj)<br>// []<br><br>Object.getOwnPropertySymbols(obj)<br>// [Symbol(foo)]<br>```<br><br>上面代码中，使用`Object.getOwnPropertyNames`方法得不到`Symbol`属性名，需要使用`Object.getOwnPropertySymbols`方法。<br><br>另一个新的API，`Reflect.ownKeys`方法可以返回所有类型的键名，包括常规键名和Symbol键名。<br><br>```javascript<br>let obj = {<br>  [Symbol('my_key')]: 1,<br>  enum: 2,<br>  nonEnum: 3<br>};<br><br>Reflect.ownKeys(obj)<br>// [Symbol(my_key), 'enum', 'nonEnum']<br>```<br><br>由于以Symbol值作为名称的属性，不会被常规方法遍历得到。我们可以利用这个特性，为对象定义一些非私有的、但又希望只用于内部的方法。<br><br>```javascript<br>var size = Symbol('size');<br><br>class Collection {<br>  constructor() {<br>    this[size] = 0;<br>  }<br><br>  add(item) {<br>    this[this[size]] = item;<br>    this[size]++;<br>  }<br><br>  static sizeOf(instance) {<br>    return instance[size];<br>  }<br>}<br><br>var x = new Collection();<br>Collection.sizeOf(x) // 0<br><br>x.add('foo');<br>Collection.sizeOf(x) // 1<br><br>Object.keys(x) // ['0']<br>Object.getOwnPropertyNames(x) // ['0']<br>Object.getOwnPropertySymbols(x) // [Symbol(size)]<br>```<br><br>上面代码中，对象x的size属性是一个Symbol值，所以`Object.keys(x)`、`Object.getOwnPropertyNames(x)`都无法获取它。这就造成了一种非私有的内部方法的效果。<br><br>## Symbol.for()，Symbol.keyFor()<br><br>有时，我们希望重新使用同一个Symbol值，`Symbol.for`方法可以做到这一点。它接受一个字符串作为参数，然后搜索有没有以该参数作为名称的Symbol值。如果有，就返回这个Symbol值，否则就新建并返回一个以该字符串为名称的Symbol值。<br><br>```javascript<br>var s1 = Symbol.for('foo');<br>var s2 = Symbol.for('foo');<br><br>s1 === s2 // true<br>```<br><br>上面代码中，s1和s2都是Symbol值，但是它们都是同样参数的`Symbol.for`方法生成的，所以实际上是同一个值。<br><br>`Symbol.for()`与`Symbol()`这两种写法，都会生成新的Symbol。它们的区别是，前者会被登记在全局环境中供搜索，后者不会。`Symbol.for()`不会每次调用就返回一个新的Symbol类型的值，而是会先检查给定的key是否已经存在，如果不存在才会新建一个值。比如，如果你调用`Symbol.for("cat")`30次，每次都会返回同一个Symbol值，但是调用`Symbol("cat")`30次，会返回30个不同的Symbol值。<br><br>```javascript<br>Symbol.for("bar") === Symbol.for("bar")<br>// true<br><br>Symbol("bar") === Symbol("bar")<br>// false<br>```<br><br>上面代码中，由于`Symbol()`写法没有登记机制，所以每次调用都会返回一个不同的值。<br><br>Symbol.keyFor方法返回一个已登记的Symbol类型值的key。<br><br>```javascript<br>var s1 = Symbol.for("foo");<br>Symbol.keyFor(s1) // "foo"<br><br>var s2 = Symbol("foo");<br>Symbol.keyFor(s2) // undefined<br>```<br><br>上面代码中，变量`s2`属于未登记的Symbol值，所以返回`undefined`。<br><br>需要注意的是，`Symbol.for`为Symbol值登记的名字，是全局环境的，可以在不同的iframe或service worker中取到同一个值。<br><br>```javascript<br>iframe = document.createElement('iframe');<br>iframe.src = String(window.location);<br>document.body.appendChild(iframe);<br><br>iframe.contentWindow.Symbol.for('foo') === Symbol.for('foo')<br>// true<br>```<br><br>上面代码中，iframe窗口生成的Symbol值，可以在主页面得到。<br><br>## 实例：模块的 Singleton 模式<br><br>Singleton模式指的是调用一个类，任何时候返回的都是同一个实例。<br><br>对于Node来说，模块文件可以看成是一个类。怎么保证每次执行这个模块文件，返回的都是同一个实例呢？<br><br>很容易想到，可以把实例放到顶层对象`global`。<br><br>```javascript<br>// mod.js<br>function A() {<br>  this.foo = 'hello';<br>}<br><br>if (!global._foo) {<br>  global._foo = new A();<br>}<br><br>module.exports = global._foo;<br>```<br><br>然后，加载上面的`mod.js`。<br><br>```javascript<br>var a = require('./mod.js');<br>console.log(a.foo);<br>```<br><br>上面代码中，变量`a`任何时候加载的都是`A`的同一个实例。<br><br>但是，这里有一个问题，全局变量`global._foo`是可写的，任何文件都可以修改。<br><br>```javascript<br>var a = require('./mod.js');<br>global._foo = 123;<br>```<br><br>上面的代码，会使得别的脚本加载`mod.js`都失真。<br><br>为了防止这种情况出现，我们就可以使用Symbol。<br><br>```javascript<br>// mod.js<br>const FOO_KEY = Symbol.for('foo');<br><br>function A() {<br>  this.foo = 'hello';<br>}<br><br>if (!global[FOO_KEY]) {<br>  global[FOO_KEY] = new A();<br>}<br><br>module.exports = global[FOO_KEY];<br>```<br><br>上面代码中，可以保证`global[FOO_KEY]`不会被无意间覆盖，但还是可以被改写。<br><br>```javascript<br>var a = require('./mod.js');<br>global[Symbol.for('foo')] = 123;<br>```<br><br>如果键名使用`Symbol`方法生成，那么外部将无法引用这个值，当然也就无法改写。<br><br>```javascript<br>```javascript<br>// mod.js<br>const FOO_KEY = Symbol('foo');<br><br>// 后面代码相同 ……<br>```<br><br>上面代码将导致其他脚本都无法引用`FOO_KEY`。但这样也有一个问题，就是如果多次执行这个脚本，每次得到的`FOO_KEY`都是不一样的。虽然Node会将脚本的执行结果缓存，一般情况下，不会多次执行同一个脚本，但是用户可以手动清除缓存，所以也不是完全可靠。<br><br>## 内置的Symbol值<br><br>除了定义自己使用的Symbol值以外，ES6还提供了11个内置的Symbol值，指向语言内部使用的方法。<br><br>### Symbol.hasInstance<br><br>对象的`Symbol.hasInstance`属性，指向一个内部方法。当其他对象使用`instanceof`运算符，判断是否为该对象的实例时，会调用这个方法。比如，`foo instanceof Foo`在语言内部，实际调用的是`Foo[Symbol.hasInstance](foo)`。<br><br>```javascript<br>class MyClass {<br>  [Symbol.hasInstance](foo) {<br>    return foo instanceof Array;<br>  }<br>}<br><br>[1, 2, 3] instanceof new MyClass() // true<br>```<br><br>上面代码中，`MyClass`是一个类，`new MyClass()`会返回一个实例。该实例的`Symbol.hasInstance`方法，会在进行`instanceof`运算时自动调用，判断左侧的运算子是否为`Array`的实例。<br><br>下面是另一个例子。<br><br>```javascript<br>class Even {<br>  static [Symbol.hasInstance](obj) {<br>    return Number(obj) % 2 === 0;<br>  }<br>}<br><br>1 instanceof Even // false<br>2 instanceof Even // true<br>12345 instanceof Even // false<br>```<br><br>### Symbol.isConcatSpreadable<br><br>对象的`Symbol.isConcatSpreadable`属性等于一个布尔值，表示该对象使用`Array.prototype.concat()`时，是否可以展开。<br><br>```javascript<br>let arr1 = ['c', 'd'];<br>['a', 'b'].concat(arr1, 'e') // ['a', 'b', 'c', 'd', 'e']<br>arr1[Symbol.isConcatSpreadable] // undefined<br><br>let arr2 = ['c', 'd'];<br>arr2[Symbol.isConcatSpreadable] = false;<br>['a', 'b'].concat(arr2, 'e') // ['a', 'b', ['c','d'], 'e']<br>```<br><br>上面代码说明，数组的默认行为是可以展开。`Symbol.isConcatSpreadable`属性等于`true`或`undefined`，都有这个效果。<br><br>类似数组的对象也可以展开，但它的`Symbol.isConcatSpreadable`属性默认为`false`，必须手动打开。<br><br>```javascript<br>let obj = {length: 2, 0: 'c', 1: 'd'};<br>['a', 'b'].concat(obj, 'e') // ['a', 'b', obj, 'e']<br><br>obj[Symbol.isConcatSpreadable] = true;<br>['a', 'b'].concat(obj, 'e') // ['a', 'b', 'c', 'd', 'e']<br>```<br><br>对于一个类来说，`Symbol.isConcatSpreadable`属性必须写成实例的属性。<br><br>```javascript<br>class A1 extends Array {<br>  constructor(args) {<br>    super(args);<br>    this[Symbol.isConcatSpreadable] = true;<br>  }<br>}<br>class A2 extends Array {<br>  constructor(args) {<br>    super(args);<br>    this[Symbol.isConcatSpreadable] = false;<br>  }<br>}<br>let a1 = new A1();<br>a1[0] = 3;<br>a1[1] = 4;<br>let a2 = new A2();<br>a2[0] = 5;<br>a2[1] = 6;<br>[1, 2].concat(a1).concat(a2)<br>// [1, 2, 3, 4, [5, 6]]<br>```<br><br>上面代码中，类`A1`是可展开的，类`A2`是不可展开的，所以使用`concat`时有不一样的结果。<br><br>### Symbol.species<br><br>对象的`Symbol.species`属性，指向一个方法。该对象作为构造函数创造实例时，会调用这个方法。即如果`this.constructor[Symbol.species]`存在，就会使用这个属性作为构造函数，来创造新的实例对象。<br><br>`Symbol.species`属性默认的读取器如下。<br><br>```javascript<br>static get [Symbol.species]() {<br>  return this;<br>}<br>```<br><br>### Symbol.match<br><br>对象的`Symbol.match`属性，指向一个函数。当执行`str.match(myObject)`时，如果该属性存在，会调用它，返回该方法的返回值。<br><br>```javascript<br>String.prototype.match(regexp)<br>// 等同于<br>regexp[Symbol.match](this)<br><br>class MyMatcher {<br>  [Symbol.match](string) {<br>    return 'hello world'.indexOf(string);<br>  }<br>}<br><br>'e'.match(new MyMatcher()) // 1<br>```<br><br>### Symbol.replace<br><br>对象的`Symbol.replace`属性，指向一个方法，当该对象被`String.prototype.replace`方法调用时，会返回该方法的返回值。<br><br>```javascript<br>String.prototype.replace(searchValue, replaceValue)<br>// 等同于<br>searchValue[Symbol.replace](this, replaceValue)<br>```<br><br>### Symbol.search<br><br>对象的`Symbol.search`属性，指向一个方法，当该对象被`String.prototype.search`方法调用时，会返回该方法的返回值。<br><br>```javascript<br>String.prototype.search(regexp)<br>// 等同于<br>regexp[Symbol.search](this)<br><br>class MySearch {<br>  constructor(value) {<br>    this.value = value;<br>  }<br>  [Symbol.search](string) {<br>    return string.indexOf(this.value);<br>  }<br>}<br>'foobar'.search(new MySearch('foo')) // 0<br>```<br><br>### Symbol.split<br><br>对象的`Symbol.split`属性，指向一个方法，当该对象被`String.prototype.split`方法调用时，会返回该方法的返回值。<br><br>```javascript<br>String.prototype.split(separator, limit)<br>// 等同于<br>separator[Symbol.split](this, limit)<br>```<br><br>### Symbol.iterator<br><br>对象的`Symbol.iterator`属性，指向该对象的默认遍历器方法。<br><br>```javascript<br>var myIterable = {};<br>myIterable[Symbol.iterator] = function* () {<br>  yield 1;<br>  yield 2;<br>  yield 3;<br>};<br><br>[...myIterable] // [1, 2, 3]<br>```<br><br>对象进行`for...of`循环时，会调用`Symbol.iterator`方法，返回该对象的默认遍历器，详细介绍参见《Iterator和for...of循环》一章。<br><br>```javascript<br>class Collection {<br>  *[Symbol.iterator]() {<br>    let i = 0;<br>    while(this[i] !== undefined) {<br>      yield this[i];<br>      ++i;<br>    }<br>  }<br>}<br><br>let myCollection = new Collection();<br>myCollection[0] = 1;<br>myCollection[1] = 2;<br><br>for(let value of myCollection) {<br>  console.log(value);<br>}<br>// 1<br>// 2<br>```<br><br>### Symbol.toPrimitive<br><br>对象的`Symbol.toPrimitive`属性，指向一个方法。该对象被转为原始类型的值时，会调用这个方法，返回该对象对应的原始类型值。<br><br>`Symbol.toPrimitive`被调用时，会接受一个字符串参数，表示当前运算的模式，一共有三种模式。<br><br>- Number：该场合需要转成数值<br>- String：该场合需要转成字符串<br>- Default：该场合可以转成数值，也可以转成字符串<br><br>```javascript<br>let obj = {<br>  [Symbol.toPrimitive](hint) {<br>    switch (hint) {<br>      case 'number':<br>        return 123;<br>      case 'string':<br>        return 'str';<br>      case 'default':<br>        return 'default';<br>      default:<br>        throw new Error();<br>     }<br>   }<br>};<br><br>2 * obj // 246<br>3 + obj // '3default'<br>obj == 'default' // true<br>String(obj) // 'str'<br>```<br><br>### Symbol.toStringTag<br><br>对象的`Symbol.toStringTag`属性，指向一个方法。在该对象上面调用`Object.prototype.toString`方法时，如果这个属性存在，它的返回值会出现在`toString`方法返回的字符串之中，表示对象的类型。也就是说，这个属性可以用来定制`[object Object]`或`[object Array]`中object后面的那个字符串。<br><br>```javascript<br>({[Symbol.toStringTag]: 'Foo'}.toString())<br>// "[object Foo]"<br><br>class Collection {<br>  get [Symbol.toStringTag]() {<br>    return 'xxx';<br>  }<br>}<br>var x = new Collection();<br>Object.prototype.toString.call(x) // "[object xxx]"<br>```<br><br>ES6新增内置对象的`Symbol.toStringTag`属性值如下。<br><br>- `JSON[Symbol.toStringTag]`：'JSON'<br>- `Math[Symbol.toStringTag]`：'Math'<br>- Module对象`M[Symbol.toStringTag]`：'Module'<br>- `ArrayBuffer.prototype[Symbol.toStringTag]`：'ArrayBuffer'<br>- `DataView.prototype[Symbol.toStringTag]`：'DataView'<br>- `Map.prototype[Symbol.toStringTag]`：'Map'<br>- `Promise.prototype[Symbol.toStringTag]`：'Promise'<br>- `Set.prototype[Symbol.toStringTag]`：'Set'<br>- `%TypedArray%.prototype[Symbol.toStringTag]`：'Uint8Array'等<br>- `WeakMap.prototype[Symbol.toStringTag]`：'WeakMap'<br>- `WeakSet.prototype[Symbol.toStringTag]`：'WeakSet'<br>- `%MapIteratorPrototype%[Symbol.toStringTag]`：'Map Iterator'<br>- `%SetIteratorPrototype%[Symbol.toStringTag]`：'Set Iterator'<br>- `%StringIteratorPrototype%[Symbol.toStringTag]`：'String Iterator'<br>- `Symbol.prototype[Symbol.toStringTag]`：'Symbol'<br>- `Generator.prototype[Symbol.toStringTag]`：'Generator'<br>- `GeneratorFunction.prototype[Symbol.toStringTag]`：'GeneratorFunction'<br><br>### Symbol.unscopables<br><br>对象的`Symbol.unscopables`属性，指向一个对象。该对象指定了使用`with`关键字时，哪些属性会被`with`环境排除。<br><br>```javascript<br>Array.prototype[Symbol.unscopables]<br>// {<br>//   copyWithin: true,<br>//   entries: true,<br>//   fill: true,<br>//   find: true,<br>//   findIndex: true,<br>//   keys: true<br>// }<br><br>Object.keys(Array.prototype[Symbol.unscopables])<br>// ['copyWithin', 'entries', 'fill', 'find', 'findIndex', 'keys']<br>```<br><br>上面代码说明，数组有6个属性，会被with命令排除。<br><br>```javascript<br>// 没有unscopables时<br>class MyClass {<br>  foo() { return 1; }<br>}<br><br>var foo = function () { return 2; };<br><br>with (MyClass.prototype) {<br>  foo(); // 1<br>}<br><br>// 有unscopables时<br>class MyClass {<br>  foo() { return 1; }<br>  get [Symbol.unscopables]() {<br>    return { foo: true };<br>  }<br>}<br><br>var foo = function () { return 2; };<br><br>with (MyClass.prototype) {<br>  foo(); // 2<br>}<br>```<br><br></div></div>
+			<nav>
+				<ul class="pager">
+				<li class='previous'><a href='9.html'>&larr; 对象的扩展</a></li>
+			<li class='next'><a href='11.html'>Proxy和Reflect&rarr;</a></li>
+				</ul>
+			</nav>
+</div>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+			<!-- /.row -->
+			  <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; 小龙软件工作室 2016 粤icp备16103410</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
