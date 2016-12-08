@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+<meta name="360-site-verification" content="cabcfb5a0f4c0d28d604e8a69e6c0cdb" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="baidu-site-verification" content="HknqsD2zhn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java 编程要点-编码助手网</title>
+      <meta content="为编码人员提供在线文档、模板等帮助，提升解决问题效率" name="description">
+			<meta content="Java 编程要点 Java, spring, tomcat, servlet, jsp, api doc, bootstrap" name="keywords">
+<meta name="sogou_site_verification" content="42nApEZFKO"/>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?dd1361ca20a10cc161e72d4bc4fef6df";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">编码助手网</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+										<li>
+                        <a href="/template.html">模板</a>
+                    </li>
+										<li>
+												<a href="/doc.html">文档</a>
+										</li>
+                    <li>
+                        <a href="/contact.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<div class="row">
+					<div class="col-xs-4">
+						<h4>Java 编程要点</h4>
+						<h6>感谢2015 Way Lau提供内容</h6>
+<ul><li><a href='./0.html'>快速开始</a></li><li><a href='./1.html'>Java概述</a></li><li><a href='./2.html'>面向对象编程</a></li><li><a href='./3.html'>语言基础</a></li><li><ul><li><a href='./4.html'>变量</a></li><li><a href='./5.html'>运算符</a></li><li><a href='./6.html'>表达式、语句和块</a></li><li><a href='./7.html'>控制流程语句</a></li></ul></li><li><a href='./8.html'>类和对象</a></li><li><a href='./9.html'>注解</a></li><li><a href='./10.html'>泛型</a></li><li><a href='./11.html'>关键字</a></li><li><a href='./12.html'>IO</a></li><li><ul><li><a href='./13.html'>I/O 流</a></li><li><a href='./14.html'>文件 I/O</a></li></ul></li><li><a href='./15.html'>并发</a></li><li><ul><li><a href='./16.html'>进程（Processes ）和线程（Threads）</a></li><li><a href='./17.html'>同步</a></li><li><a href='./18.html'>活跃度（Liveness）</a></li><li><a href='./19.html'>Guarded Blocks</a></li><li><a href='./20.html'>不可变对象（Immutable Objects)</a></li><li><a href='./21.html'>高级并发对象</a></li></ul></li><li><a href='./22.html'>集合框架</a></li><li><a href='./23.html'>网络基础</a></li><li><ul><li><a href='./24.html'>Socket</a></li><li><a href='./25.html'>I/O 模型的演进</a></li></ul></li><li><a href='./26.html'>JDBC</a></li><li><a href='./27.html'>附录</a></li><li></li>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+<div class="col-xs-8">
+	<nav>
+		<ul class="pager">
+			<li class='previous'><a href='15.html'>&larr; 并发</a></li>
+		<li class='next'><a href='17.html'>同步&rarr;</a></li>
+		</ul>
+	</nav>
+			<div class="row"><div class="col-xs-12">## 进程（Processes ）和线程（Threads）<br><br>进程和线程是并发编程的两个基本的执行单元。在 Java 中，并发编程主要涉及线程。<br><br>一个计算机系统通常有许多活动的进程和线程。在给定的时间内，每个处理器只能有一个线程得到真正的运行。对于单核处理器来说，处理时间是通过时间切片来在进程和线程之间进行共享的。<br><br>现在多核处理器或多进程的电脑系统越来越流行。这大大增强了系统的进程和线程的并发执行能力。但即便是没有多处理器或多进程的系统中，并发仍然是可能的。<br><br>### 进程<br><br>进程有一个独立的执行环境。进程通常有一个完整的、私人的基本运行时资源;特别是,每个进程都有其自己的内存空间。<br><br>进程往往被视为等同于程序或应用程序。然而,用户将看到一个单独的应用程序可能实际上是一组合作的进程。大多数操作系统都支持进程间通信( Inter Process Communication，简称 IPC)资源,如管道和套接字。IPC 不仅用于同个系统的进程之间的通信，也可以用在不同系统的进程。<br><br>大多数 Java 虚拟机的实现作为一个进程运行。Java 应用程序可以使用 [ProcessBuilder](https://docs.oracle.com/javase/8/docs/api/java/lang/ProcessBuilder.html) 对象创建额外的进程。多进程应用程序超出了本书的讲解范围。<br><br>### 线程<br><br>线程有时被称为轻量级进程。进程和线程都提供一个执行环境,但创建一个新的线程比创建一个新的进程需要更少的资源。<br><br>线程中存在于进程中,每个进程都至少一个线程。线程共享进程的资源,包括内存和打开的文件。这使得工作变得高效，但也存在了一个潜在的问题——通信。<br><br>多线程执行是 Java 平台的一个重要特点。每个应用程序都至少有一个线程,或者几个,如果算上“系统”的线程（负责内存管理和信号处理）那就更多。但从程序员的角度来看,你启动只有一个线程，称为主线程。这个线程有能力创建额外的线程。<br><br>## 线程对象<br><br>每个线程都与 [Thread](https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html) 类的一个实例相关联。有两种使用线程对象来创建并发应用程序的基本策略：<br><br>* 为了直接控制线程的创建和管理，简单地初始化线程，应用程序每次需要启动一个异步任务。<br>* 通过传递给应用程序任务给一个 executor，从而从应用程序的其他部分抽象出线程管理。<br><br>### 定义和启动一个线程<br><br>Java 中有两种方式创建 Thread 的实例：<br><br>* 提供 Runnable 对象。Runnable  接口定义了一个方法 run ,用来包含线程要执行的代码。如 HelloRunnable 所示：<br><br>```java<br>public class HelloRunnable implements Runnable {<br>	/* (non-Javadoc)<br>	 * @see java.lang.Runnable#run()<br>	 */<br>	@Override<br>	public void run() {<br>		System.out.println("Hello from a thread!");<br>	}<br><br>	/**<br>	 * @param args<br>	 */<br>	public static void main(String[] args) {<br>        (new Thread(new HelloRunnable())).start();<br>	}<br>}<br>```<br><br>* 继承 Thread。Thread  类本身是实现 Runnable，虽然它的 run 方法啥都没干。HelloThread  示例如下：<br><br>```java<br>public class HelloThread extends Thread {<br>	<br>	public void run() {<br>        System.out.println("Hello from a thread!");<br>    }<br>	/**<br>	 * @param args<br>	 */<br>	public static void main(String[] args) {<br>		(new HelloThread()).start();<br>	}<br>}<br>```<br><br>请注意,这两个例子调用 start 来启动线程。<br><br>第一种方式,它使用 Runnable 对象,在实际应用中更普遍,因为 Runnable 对象可以继承 Thread 以外的类。第二种方式，在简单的应用程序更容易使用,但受限于你的任务类必须是一个 Thread 的后代。本书推荐使用第一种方法,将 Runnable 任务从 Thread 对象分离来执行任务。这不仅更灵活,而且它适用于高级线程管理 API。<br><br>Thread 类还定义了大量的方法用于线程管理。<br><br>### Sleep 来暂停执行<br><br>Thread.sleep 可以让当前线程执行暂停一个时间段，这样处理器时间就可以给其他线程使用。<br><br>sleep 有两种重载形式：一个是指定睡眠时间为毫秒，另外一个是指定睡眠时间为纳秒级。然而，这些睡眠时间不能保证是精确的，因为它们是通过由操作系统来提供的，并受其限制，因而不能假设 sleep 的睡眠时间是精确的。此外，睡眠周期也可以通过中断终止，我们将在后面的章节中看到。<br><br>SleepMessages 示例使用 sleep 每隔4秒打印一次消息：<br><br>```java<br>public class SleepMessages {<br><br>	/**<br>	 * @param args<br>	 */<br>	public static void main(String[] args) throws InterruptedException {<br>		String importantInfo[] = { "Mares eat oats", "Does eat oats", "Little lambs eat ivy",<br>				"A kid will eat ivy too" };<br><br>		for (int i = 0; i < importantInfo.length; i++) {<br>		<br>			// Pause for 4 seconds<br>			Thread.sleep(4000);<br>			<br>			// Print a message<br>			System.out.println(importantInfo[i]);<br>		}<br>	}<br>}<br>```<br><br>请注意 main 声明抛出 InterruptedException。当 sleep 是激活的时候，若有另一个线程中断当前线程时，则 sleep 抛出异常。由于该应用程序还没有定义的另一个线程来引起的中断，所以考虑捕捉 InterruptedException。<br><br>### 中断（interrupt）<br><br>中断是表明一个线程，它应该停止它正在做和将要做的事。线程通过在 Thread 对象调用 [interrupt](https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html#interrupt--) 来实现线程的中断。为了中断机制能正常工作，被中断的线程必须支持自己的中断。<br><br>#### 支持中断<br><br>如何实现线程支持自己的中断？这要看是它目前正在做什么。如果线程调用方法频繁抛出 InterruptedException 异常，那么它只要在 run 方法捕获了异常之后返回即可。例如 ：<br><br>    for (int i = 0; i < importantInfo.length; i++) {<br>    <br>        // Pause for 4 seconds<br>        try {<br>            Thread.sleep(4000);<br>        } catch (InterruptedException e) {<br>        <br>            // We've been interrupted: no more messages.<br>            return;<br>        }<br>        <br>        // Print a message<br>        System.out.println(importantInfo[i]);<br>    }<br><br>很多方法都会抛出 InterruptedException，如 sleep，被设计成在收到中断时立即取消他们当前的操作并返回。<br><br>若线程长时间没有调用方法抛出 InterruptedException 的话，那么它必须定期调用 Thread.interrupted ，该方法在接收到中断后将返回 true。<br><br>    for (int i = 0; i < inputs.length; i++) {<br>    <br>        heavyCrunch(inputs[i]);<br>        <br>        if (Thread.interrupted()) {<br>        <br>            // We've been interrupted: no more crunching.<br>            return;<br>        }<br>    }<br><br>在这个简单的例子中，代码简单地测试该中断，如果已接收到中断线程就退出。在更复杂的应用程序，它可能会更有意义抛出一个 InterruptedException：<br><br>    if (Thread.interrupted()) {<br>        throw new InterruptedException();<br>    }<br>    <br>#### 中断状态标志<br><br>中断机制是使用被称为中断状态的内部标志实现的。调用 Thread.interrupt 可以设置该标志。当一个线程通过调用静态方法 Thread.interrupted 来检查中断，中断状态被清除。非静态 isInterrupted 方法，它是用于线程来查询另一个线程的中断状态，而不会改变中断状态标志。<br><br>按照惯例，任何方法因抛出一个 InterruptedException 而退出都会清除中断状态。当然，它可能因为另一个线程调用 interrupt 而让那个中断状态立即被重新设置回来。<br><br>### join 方法<br><br>join 方法允许一个线程等待另一个完成。假设 t 是一个正在执行的 Thread 对象，那么<br><br>    t.join();<br><br>它会导致当前线程暂停执行直到 t 线程终止。join 允许程序员指定一个等待周期。与 sleep 一样，等待时间是依赖于操作系统的时间，同时不能假设 join 等待时间是精确的。<br><br>像 sleep 一样，join 并通过 InterruptedException 退出来响应中断。<br><br>### SimpleThreads 示例<br><br>SimpleThreads 示例由两个线程。第一个线程是每个 Java 应用程序都有的主线程。主线程创建的 Runnable 对象 MessageLoop，并等待它完成。如果  MessageLoop 需要很长时间才能完成，主线程就中断它。<br><br>该 MessageLoop 线程打印出一系列消息。如果中断之前就已经打印了所有消息，则 MessageLoop 线程打印一条消息并退出。<br><br>```java<br>public class SimpleThreads {<br><br>	  // Display a message, preceded by<br>    // the name of the current thread<br>    static void threadMessage(String message) {<br>        String threadName =<br>            Thread.currentThread().getName();<br>        System.out.format("%s: %s%n",<br>                          threadName,<br>                          message);<br>    }<br><br>    private static class MessageLoop<br>        implements Runnable {<br>        public void run() {<br>            String importantInfo[] = {<br>                "Mares eat oats",<br>                "Does eat oats",<br>                "Little lambs eat ivy",<br>                "A kid will eat ivy too"<br>            };<br>            try {<br>                for (int i = 0; i < importantInfo.length; i++) {<br>                <br>                    // Pause for 4 seconds<br>                    Thread.sleep(4000);<br>                    <br>                    // Print a message<br>                    threadMessage(importantInfo[i]);<br>                }<br>            } catch (InterruptedException e) {<br>                threadMessage("I wasn't done!");<br>            }<br>        }<br>    }<br><br>    public static void main(String args[])<br>        throws InterruptedException {<br><br>        // Delay, in milliseconds before<br>        // we interrupt MessageLoop<br>        // thread (default one hour).<br>        long patience = 1000 * 60 * 60;<br><br>        // If command line argument<br>        // present, gives patience<br>        // in seconds.<br>        if (args.length > 0) {<br>            try {<br>                patience = Long.parseLong(args[0]) * 1000;<br>            } catch (NumberFormatException e) {<br>                System.err.println("Argument must be an integer.");<br>                System.exit(1);<br>            }<br>        }<br><br>        threadMessage("Starting MessageLoop thread");<br>        long startTime = System.currentTimeMillis();<br>        Thread t = new Thread(new MessageLoop());<br>        t.start();<br><br>        threadMessage("Waiting for MessageLoop thread to finish");<br>        <br>        // loop until MessageLoop<br>        // thread exits<br>        while (t.isAlive()) {<br>            threadMessage("Still waiting...");<br>            <br>            // Wait maximum of 1 second<br>            // for MessageLoop thread<br>            // to finish.<br>            <br>            t.join(1000);<br>            if (((System.currentTimeMillis() - startTime) > patience)<br>                  && t.isAlive()) {<br>                threadMessage("Tired of waiting!");<br>                t.interrupt();<br>                <br>                // Shouldn't be long now<br>                // -- wait indefinitely<br>                t.join();<br>            }<br>        }<br>        threadMessage("Finally!");<br>    }<br>}<br>```<br><br></div></div>
+			<nav>
+				<ul class="pager">
+				<li class='previous'><a href='15.html'>&larr; 并发</a></li>
+			<li class='next'><a href='17.html'>同步&rarr;</a></li>
+				</ul>
+			</nav>
+</div>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+			<!-- /.row -->
+			  <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; 小龙软件工作室 2016 粤icp备16103410</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

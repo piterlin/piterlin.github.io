@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+<meta name="360-site-verification" content="cabcfb5a0f4c0d28d604e8a69e6c0cdb" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="baidu-site-verification" content="HknqsD2zhn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java 编程要点-编码助手网</title>
+      <meta content="为编码人员提供在线文档、模板等帮助，提升解决问题效率" name="description">
+			<meta content="Java 编程要点 Java, spring, tomcat, servlet, jsp, api doc, bootstrap" name="keywords">
+<meta name="sogou_site_verification" content="42nApEZFKO"/>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?dd1361ca20a10cc161e72d4bc4fef6df";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">编码助手网</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+										<li>
+                        <a href="/template.html">模板</a>
+                    </li>
+										<li>
+												<a href="/doc.html">文档</a>
+										</li>
+                    <li>
+                        <a href="/contact.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<div class="row">
+					<div class="col-xs-4">
+						<h4>Java 编程要点</h4>
+						<h6>感谢2015 Way Lau提供内容</h6>
+<ul><li><a href='./0.html'>快速开始</a></li><li><a href='./1.html'>Java概述</a></li><li><a href='./2.html'>面向对象编程</a></li><li><a href='./3.html'>语言基础</a></li><li><ul><li><a href='./4.html'>变量</a></li><li><a href='./5.html'>运算符</a></li><li><a href='./6.html'>表达式、语句和块</a></li><li><a href='./7.html'>控制流程语句</a></li></ul></li><li><a href='./8.html'>类和对象</a></li><li><a href='./9.html'>注解</a></li><li><a href='./10.html'>泛型</a></li><li><a href='./11.html'>关键字</a></li><li><a href='./12.html'>IO</a></li><li><ul><li><a href='./13.html'>I/O 流</a></li><li><a href='./14.html'>文件 I/O</a></li></ul></li><li><a href='./15.html'>并发</a></li><li><ul><li><a href='./16.html'>进程（Processes ）和线程（Threads）</a></li><li><a href='./17.html'>同步</a></li><li><a href='./18.html'>活跃度（Liveness）</a></li><li><a href='./19.html'>Guarded Blocks</a></li><li><a href='./20.html'>不可变对象（Immutable Objects)</a></li><li><a href='./21.html'>高级并发对象</a></li></ul></li><li><a href='./22.html'>集合框架</a></li><li><a href='./23.html'>网络基础</a></li><li><ul><li><a href='./24.html'>Socket</a></li><li><a href='./25.html'>I/O 模型的演进</a></li></ul></li><li><a href='./26.html'>JDBC</a></li><li><a href='./27.html'>附录</a></li><li></li>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+<div class="col-xs-8">
+	<nav>
+		<ul class="pager">
+			<li class='previous'><a href='19.html'>&larr; Guarded Blocks</a></li>
+		<li class='next'><a href='21.html'>高级并发对象&rarr;</a></li>
+		</ul>
+	</nav>
+			<div class="row"><div class="col-xs-12">## 不可变对象（Immutable Objects）<br><br>如果一个对象它被构造后其，状态不能改变，则这个对象被认为是不可变的（immutable ）。不可变对象的好处是可以创建简单的、可靠的代码。<br><br>不可变对象在并发应用种特别有用。因为他们不能改变状态，它们不能被线程干扰所中断或者被其他线程观察到内部不一致的状态。<br><br>程序员往往不愿使用不可变对象，因为他们担心创建一个新的对象要比更新对象的成本要高。实际上这种开销常常被过分高估，而且使用不可变对象所带来的一些效率提升也抵消了这种开销。例如：使用不可变对象降低了垃圾回收所产生的额外开销，也减少了用来确保使用可变对象不出现并发错误的一些额外代码。<br><br>接下来看一个可变对象的类，然后转化为一个不可变对象的类。通过这个例子说明转化的原则以及使用不可变对象的好处。<br><br>### 一个同步类的例子<br><br>SynchronizedRGB 是表示颜色的类，每一个对象代表一种颜色，使用三个整形数表示颜色的三基色，字符串表示颜色名称。<br><br>```java<br>public class SynchronizedRGB {<br>	// Values must be between 0 and 255.<br>    private int red;<br>    private int green;<br>    private int blue;<br>    private String name;<br><br>    private void check(int red,<br>                       int green,<br>                       int blue) {<br>        if (red < 0 || red > 255<br>            || green < 0 || green > 255<br>            || blue < 0 || blue > 255) {<br>            throw new IllegalArgumentException();<br>        }<br>    }<br><br>    public SynchronizedRGB(int red,<br>                           int green,<br>                           int blue,<br>                           String name) {<br>        check(red, green, blue);<br>        this.red = red;<br>        this.green = green;<br>        this.blue = blue;<br>        this.name = name;<br>    }<br><br>    public void set(int red,<br>                    int green,<br>                    int blue,<br>                    String name) {<br>        check(red, green, blue);<br>        synchronized (this) {<br>            this.red = red;<br>            this.green = green;<br>            this.blue = blue;<br>            this.name = name;<br>        }<br>    }<br><br>    public synchronized int getRGB() {<br>        return ((red << 16) | (green << 8) | blue);<br>    }<br><br>    public synchronized String getName() {<br>        return name;<br>    }<br><br>    public synchronized void invert() {<br>        red = 255 - red;<br>        green = 255 - green;<br>        blue = 255 - blue;<br>        name = "Inverse of " + name;<br>    }<br>}<br>```<br>使用 SynchronizedRGB 时需要小心，避免其处于不一致的状态。例如一个线程执行了以下代码：<br><br>    SynchronizedRGB color =<br>        new SynchronizedRGB(0, 0, 0, "Pitch Black");<br>    ...<br>    int myColorInt = color.getRGB();      //Statement 1<br>    String myColorName = color.getName(); //Statement 2<br><br><br>如果有另外一个线程在 Statement 1 之后、Statement 2 之前调用了 color.set 方法，那么 myColorInt 的值和 myColorName 的值就会不匹配。为了避免出现这样的结果，必须要像下面这样把这两条语句绑定到一块执行：<br><br>    synchronized (color) {<br>        int myColorInt = color.getRGB();<br>        String myColorName = color.getName();<br>    } <br><br>这种不一致的问题只可能发生在可变对象上。<br><br>### 定义不可变对象的策略<br><br>以下的一些创建不可变对象的简单策略。并非所有不可变类都完全遵守这些规则，不过这不是编写这些类的程序员们粗心大意造成的，很可能的是他们有充分的理由确保这些对象在创建后不会被修改。但这需要非常复杂细致的分析，并不适用于初学者。<br><br>* 不要提供 setter 方法。（包括修改字段的方法和修改字段引用对象的方法）<br>* 将类的所有字段定义为 final、private 的。<br>* 不允许子类重写方法。简单的办法是将类声明为 final，更好的方法是将构造函数声明为私有的，通过工厂方法创建对象。<br>* 如果类的字段是对可变对象的引用，不允许修改被引用对象。<br>    * 不提供修改可变对象的方法。<br>    * 不共享可变对象的引用。当一个引用被当做参数传递给构造函数，而这个引用指向的是一个外部的可变对象时，一定不要保存这个引用。如果必须要保存，那么创建可变对象的拷贝，然后保存拷贝对象的引用。同样如果需要返回内部的可变对象时，不要返回可变对象本身，而是返回其拷贝。<br>    <br>将这一策略应用到 SynchronizedRGB 有以下几步：<br><br>* SynchronizedRGB 类有两个 setter 方法。第一个 set 方法只是简单的为字段设值，第二个 invert 方法修改为创建一个新对象，而不是在原有对象上修改。<br>* 所有的字段都已经是私有的，加上 final 即可。<br>* 将类声明为 final 的<br>* 只有一个字段是对象引用，并且被引用的对象也是不可变对象。<br><br>经过以上这些修改后，我们得到了 ImmutableRGB：<br><br>```java<br>public class ImmutableRGB {<br>	  // Values must be between 0 and 255.<br>    final private int red;<br>    final private int green;<br>    final private int blue;<br>    final private String name;<br><br>    private void check(int red,<br>                       int green,<br>                       int blue) {<br>        if (red < 0 || red > 255<br>            || green < 0 || green > 255<br>            || blue < 0 || blue > 255) {<br>            throw new IllegalArgumentException();<br>        }<br>    }<br><br>    public ImmutableRGB(int red,<br>                        int green,<br>                        int blue,<br>                        String name) {<br>        check(red, green, blue);<br>        this.red = red;<br>        this.green = green;<br>        this.blue = blue;<br>        this.name = name;<br>    }<br><br><br>    public int getRGB() {<br>        return ((red << 16) | (green << 8) | blue);<br>    }<br><br>    public String getName() {<br>        return name;<br>    }<br><br>    public ImmutableRGB invert() {<br>        return new ImmutableRGB(255 - red,<br>                       255 - green,<br>                       255 - blue,<br>                       "Inverse of " + name);<br>    }<br>}<br>```<br><br></div></div>
+			<nav>
+				<ul class="pager">
+				<li class='previous'><a href='19.html'>&larr; Guarded Blocks</a></li>
+			<li class='next'><a href='21.html'>高级并发对象&rarr;</a></li>
+				</ul>
+			</nav>
+</div>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+			<!-- /.row -->
+			  <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; 小龙软件工作室 2016 粤icp备16103410</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

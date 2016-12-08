@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+<meta name="360-site-verification" content="cabcfb5a0f4c0d28d604e8a69e6c0cdb" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="baidu-site-verification" content="HknqsD2zhn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java 编程要点-编码助手网</title>
+      <meta content="为编码人员提供在线文档、模板等帮助，提升解决问题效率" name="description">
+			<meta content="Java 编程要点 Java, spring, tomcat, servlet, jsp, api doc, bootstrap" name="keywords">
+<meta name="sogou_site_verification" content="42nApEZFKO"/>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?dd1361ca20a10cc161e72d4bc4fef6df";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">编码助手网</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+										<li>
+                        <a href="/template.html">模板</a>
+                    </li>
+										<li>
+												<a href="/doc.html">文档</a>
+										</li>
+                    <li>
+                        <a href="/contact.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<div class="row">
+					<div class="col-xs-4">
+						<h4>Java 编程要点</h4>
+						<h6>感谢2015 Way Lau提供内容</h6>
+<ul><li><a href='./0.html'>快速开始</a></li><li><a href='./1.html'>Java概述</a></li><li><a href='./2.html'>面向对象编程</a></li><li><a href='./3.html'>语言基础</a></li><li><ul><li><a href='./4.html'>变量</a></li><li><a href='./5.html'>运算符</a></li><li><a href='./6.html'>表达式、语句和块</a></li><li><a href='./7.html'>控制流程语句</a></li></ul></li><li><a href='./8.html'>类和对象</a></li><li><a href='./9.html'>注解</a></li><li><a href='./10.html'>泛型</a></li><li><a href='./11.html'>关键字</a></li><li><a href='./12.html'>IO</a></li><li><ul><li><a href='./13.html'>I/O 流</a></li><li><a href='./14.html'>文件 I/O</a></li></ul></li><li><a href='./15.html'>并发</a></li><li><ul><li><a href='./16.html'>进程（Processes ）和线程（Threads）</a></li><li><a href='./17.html'>同步</a></li><li><a href='./18.html'>活跃度（Liveness）</a></li><li><a href='./19.html'>Guarded Blocks</a></li><li><a href='./20.html'>不可变对象（Immutable Objects)</a></li><li><a href='./21.html'>高级并发对象</a></li></ul></li><li><a href='./22.html'>集合框架</a></li><li><a href='./23.html'>网络基础</a></li><li><ul><li><a href='./24.html'>Socket</a></li><li><a href='./25.html'>I/O 模型的演进</a></li></ul></li><li><a href='./26.html'>JDBC</a></li><li><a href='./27.html'>附录</a></li><li></li>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+<div class="col-xs-8">
+	<nav>
+		<ul class="pager">
+			<li class='previous'><a href='24.html'>&larr; Socket</a></li>
+		<li class='next'><a href='26.html'>JDBC&rarr;</a></li>
+		</ul>
+	</nav>
+			<div class="row"><div class="col-xs-12"># I/O 模型的演进<br><br><br>什么是同步？什么是异步？阻塞和非阻塞又有什么区别？本文先从 Unix 的 I/O 模型讲起，介绍了5种常见的 I/O 模型。而后再引出 Java 的 I/O 模型的演进过程，并用实例说明如何选择合适的 Java I/O 模型来提高系统的并发量和可用性。<br><br><!-- more --><br><br>由于，Java 的 I/O 依赖于操作系统的实现，所以先了解 Unix 的 I/O 模型有助于理解 Java 的 I/O。<br><br>## 相关概念<br><br>### 同步和异步<br><br>描述的是用户线程与内核的交互方式：<br><br>* **同步**是指用户线程发起 I/O  请求后需要等待或者轮询内核 I/O 操作完成后才能继续执行；<br>* **异步**是指用户线程发起 I/O 请求后仍继续执行，当内核 I/O 操作完成后会通知用户线程，或者调用用户线程注册的回调函数。<br><br>### 阻塞和非阻塞<br><br>描述的是用户线程调用内核 I/O 操作的方式：<br><br>* **阻塞**是指 I/O 操作需要彻底完成后才返回到用户空间；<br>* **非阻塞**是指 I/O 操作被调用后立即返回给用户一个状态值，无需等到 I/O 操作彻底完成。<br><br>一个 I/O 操作其实分成了两个步骤：发起 I/O 请求和实际的 I/O 操作。 <br>阻塞 I/O 和非阻塞 I/O 的区别在于第一步，发起 I/O 请求是否会被阻塞，如果阻塞直到完成那么就是传统的阻塞 I/O ，如果不阻塞，那么就是非阻塞 I/O 。 <br>同步 I/O 和异步 I/O 的区别就在于第二个步骤是否阻塞，如果实际的 I/O 读写阻塞请求进程，那么就是同步 I/O 。 <br><br><br>### Unix I/O 模型<br> <br>Unix 下共有五种 I/O 模型： <br><br>1. 阻塞 I/O <br>2. 非阻塞 I/O <br>3. I/O 复用（select 和 poll） <br>4. 信号驱动 I/O（SIGIO） <br>5. 异步 I/O（Posix.1 的 aio_ 系列函数）<br><br>注：若读者想深入了解 Unix 的网络知识，推荐阅读《Unix Network Programming》，文本只简单介绍下这五种模型，文中的图例也引用自该书的图例。<br><br>#### 阻塞 I/O<br><br>请求无法立即完成则保持阻塞。<br><br>* 阶段1：等待数据就绪。网络 I/O 的情况就是等待远端数据陆续抵达；磁盘I/O的情况就是等待磁盘数据从磁盘上读取到内核态内存中。<br>* 阶段2：数据拷贝。出于系统安全,用户态的程序没有权限直接读取内核态内存,因此内核负责把内核态内存中的数据拷贝一份到用户态内存中。<br><br>![](../images/net/1-7 bio.png)<br><br>#### 非阻塞 I/O<br><br>* socket 设置为 NONBLOCK（非阻塞）就是告诉内核，当所请求的 I/O 操作无法完成时，不要将进程睡眠，而是返回一个错误码(EWOULDBLOCK) ，这样请求就不会阻塞<br>* I/O 操作函数将不断的测试数据是否已经准备好，如果没有准备好，继续测试，直到数据准备好为止。整个 I/O 请求的过程中，虽然用户线程每次发起 I/O 请求后可以立即返回，但是为了等到数据，仍需要不断地轮询、重复请求，消耗了大量的 CPU 的资源<br>* 数据准备好了，从内核拷贝到用户空间。<br><br>![](../images/net/1-8 nio.png)<br><br>一般很少直接使用这种模型，而是在其他 I/O 模型中使用非阻塞 I/O 这一特性。这种方式对单个 I/O 请求意义不大,但给 I/O 多路复用铺平了道路.<br><br>### I/O 复用（异步阻塞 I/O）<br><br>I/O 复用会用到 select 或者 poll 函数，这两个函数也会使进程阻塞，但是和阻塞 I/O 所不同的的，这两个函数可以同时阻塞多个 I/O 操作。而且可以同时对多个读操作，多个写操作的 I/O 函数进行检测，直到有数据可读或可写时，才真正调用 I/O 操作函数。 <br><br><br>![](../images/net/1-9 io-multiplexing.png)<br><br>从流程上来看，使用 select 函数进行 I/O 请求和同步阻塞模型没有太大的区别，甚至还多了添加监视 socket，以及调用 select 函数的额外操作，效率更差。但是，使用 select 以后最大的优势是用户可以在一个线程内同时处理多个 socket 的 I/O 请求。用户可以注册多个 socket，然后不断地调用 select 读取被激活的 socket，即可达到在同一个线程内同时处理多个 I/O 请求的目的。而在同步阻塞模型中，必须通过多线程的方式才能达到这个目的。<br><br>I/O 多路复用模型使用了 Reactor 设计模式实现了这一机制。<br><br>注：有关“Reactor 设计模式”请可参阅 <https://en.wikipedia.org/wiki/Reactor_pattern>。<br><br>调用 select / poll 该方法由一个用户态线程负责轮询多个 socket,直到某个阶段1的数据就绪,再通知实际的用户线程执行阶段2的拷贝。<br>通过一个专职的用户态线程执行非阻塞 I/O 轮询,模拟实现了阶段1的异步化。<br><br>### 信号驱动 I/O（SIGIO） <br><br>首先我们允许 socket 进行信号驱动 I/O,并安装一个信号处理函数，进程继续运行并不阻塞。当数据准备好时，进程会收到一个 SIGIO 信号，可以在信号处理函数中调用 I/O 操作函数处理数据。<br><br>![](../images/net/1-10 signal-driven-io.png)<br><br><br>### 异步 I/O<br><br>调用 aio_read 函数，告诉内核描述字，缓冲区指针，缓冲区大小，文件偏移以及通知的方式，然后立即返回。当内核将数据拷贝到缓冲区后，再通知应用程序。<br><br>![](../images/net/1-11 aio.png)<br><br>异步 I/O 模型使用了 Proactor 设计模式实现了这一机制。<br><br>注：有关“Proactor 设计模式”可以参阅 <https://en.wikipedia.org/wiki/Proactor_pattern>。<br><br>告知内核,当整个过程(包括阶段1和阶段2)全部完成时,通知应用程序来读数据.<br><br><br>## 几种 I/O 模型的比较 <br><br>前四种模型的区别是阶段1不相同，阶段2基本相同，都是将数据从内核拷贝到调用者的缓冲区。而异步 I/O 的两个阶段都不同于前四个模型。<br><br>同步 I/O 操作引起请求进程阻塞，直到 I/O 操作完成。异步 I/O 操作不引起请求进程阻塞。<br><br>![](../images/net/1-12 Comparison of the five IO models.png)<br><br><br>## 常见 Java I/O 模型<br><br>在了解了 UNIX 的 I/O 模型之后，其实 Java 的 I/O 模型也是类似。<br><br>## “阻塞I/O”模式  <br><br>在上一节 Socket 章节中的 EchoServer 就是一个简单的阻塞 I/O 例子，服务器启动后，等待客户端连接。在客户端连接服务器后，服务器就阻塞读写取数据流。<br><br>EchoServer 代码：<br><br>```java<br>public class EchoServer {<br>	public static int DEFAULT_PORT = 7;<br><br>	public static void main(String[] args) throws IOException {<br><br>		int port;<br><br>		try {<br>			port = Integer.parseInt(args[0]);<br>		} catch (RuntimeException ex) {<br>			port = DEFAULT_PORT;<br>		}<br>        <br>        try (<br>            ServerSocket serverSocket =<br>                new ServerSocket(port);<br>            Socket clientSocket = serverSocket.accept();     <br>            PrintWriter out =<br>                new PrintWriter(clientSocket.getOutputStream(), true);                   <br>            BufferedReader in = new BufferedReader(<br>                new InputStreamReader(clientSocket.getInputStream()));<br>        ) {<br>            String inputLine;<br>            while ((inputLine = in.readLine()) != null) {<br>                out.println(inputLine);<br>            }<br>        } catch (IOException e) {<br>            System.out.println("Exception caught when trying to listen on port "<br>                + port + " or listening for a connection");<br>            System.out.println(e.getMessage());<br>        }<br>    }<br>}<br>```<br><br>## 改进为“阻塞I/O+多线程”模式  <br><br>使用多线程来支持多个客户端来访问服务器。<br><br>主线程 MultiThreadEchoServer.java<br><br>```java<br>public class MultiThreadEchoServer {<br>	public static int DEFAULT_PORT = 7;<br><br>	public static void main(String[] args) throws IOException {<br><br>		int port;<br><br>		try {<br>			port = Integer.parseInt(args[0]);<br>		} catch (RuntimeException ex) {<br>			port = DEFAULT_PORT;<br>		}<br>		Socket clientSocket = null;<br>		try (ServerSocket serverSocket = new ServerSocket(port);) {<br>			while (true) {<br>				clientSocket = serverSocket.accept();<br>				<br>				// MultiThread<br>				new Thread(new EchoServerHandler(clientSocket)).start();<br>			}<br>		} catch (IOException e) {<br>			System.out.println(<br>					"Exception caught when trying to listen on port " + port + " or listening for a connection");<br>			System.out.println(e.getMessage());<br>		}<br>	}<br>}<br>```<br><br>处理器类 EchoServerHandler.java<br><br>```java<br>public class EchoServerHandler implements Runnable {<br>	private Socket clientSocket;<br><br>	public EchoServerHandler(Socket clientSocket) {<br>		this.clientSocket = clientSocket;<br>	}<br><br>	@Override<br>	public void run() {<br>		try (PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);<br>				BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));) {<br><br>			String inputLine;<br>			while ((inputLine = in.readLine()) != null) {<br>				out.println(inputLine);<br>			}<br>		} catch (IOException e) {<br>			System.out.println(e.getMessage());<br>		}<br>	}<br>}<br>```<br><br>**存在问题**：每次接收到新的连接都要新建一个线程，处理完成后销毁线程，代价大。当有大量地短连接出现时，性能比较低。<br><br><br>## 改进为“阻塞I/O+线程池”模式  <br><br>针对上面多线程的模型中，出现的线程重复创建、销毁带来的开销，可以采用线程池来优化。每次接收到新连接后从池中取一个空闲线程进行处理，处理完成后再放回池中，重用线程避免了频率地创建和销毁线程带来的开销。<br><br>主线程 ThreadPoolEchoServer.java<br><br>```java<br>public class ThreadPoolEchoServer {<br>	public static int DEFAULT_PORT = 7;<br><br>	public static void main(String[] args) throws IOException {<br><br>		int port;<br><br>		try {<br>			port = Integer.parseInt(args[0]);<br>		} catch (RuntimeException ex) {<br>			port = DEFAULT_PORT;<br>		}<br>		ExecutorService threadPool = Executors.newFixedThreadPool(5);<br>		Socket clientSocket = null;<br>		try (ServerSocket serverSocket = new ServerSocket(port);) {<br>			while (true) {<br>				clientSocket = serverSocket.accept();<br>				<br>				// Thread Pool<br>				threadPool.submit(new Thread(new EchoServerHandler(clientSocket)));<br>			}<br>		} catch (IOException e) {<br>			System.out.println(<br>					"Exception caught when trying to listen on port " + port + " or listening for a connection");<br>			System.out.println(e.getMessage());<br>		}<br>	}<br>}<br>```<br><br>**存在问题**：在大量短连接的场景中性能会有提升，因为不用每次都创建和销毁线程，而是重用连接池中的线程。但在大量长连接的场景中，因为线程被连接长期占用，不需要频繁地创建和销毁线程，因而没有什么优势。<br><br>虽然这种方法可以适用于小到中度规模的客户端的并发数，如果连接数超过 100,000或更多，那么性能将很不理想。<br><br>## 改进为“非阻塞I/O”模式  <br><br>"阻塞I/O+线程池"网络模型虽然比"阻塞I/O+多线程"网络模型在性能方面有提升，但这两种模型都存在一个共同的问题：读和写操作都是同步阻塞的,面对大并发（持续大量连接同时请求）的场景，需要消耗大量的线程来维持连接。CPU 在大量的线程之间频繁切换，性能损耗很大。一旦单机的连接超过1万，甚至达到几万的时候，服务器的性能会急剧下降。<br><br>而 NIO 的 Selector 却很好地解决了这个问题，用主线程（一个线程或者是 CPU 个数的线程）保持住所有的连接，管理和读取客户端连接的数据，将读取的数据交给后面的线程池处理，线程池处理完业务逻辑后，将结果交给主线程发送响应给客户端，少量的线程就可以处理大量连接的请求。<br><br>Java NIO 由以下几个核心部分组成：<br><br>* Channel<br>* Buffer<br>* Selector<br><br>要使用 Selector，得向 Selector 注册 Channel，然后调用它的 select()方法。这个方法会一直阻塞到某个注册的通道有事件就绪。一旦这个方法返回，线程就可以处理这些事件，事件的例子有如新连接进来，数据接收等。<br><br>主线程 NonBlokingEchoServer.java<br><br>```java<br>public class NonBlokingEchoServer {<br>	public static int DEFAULT_PORT = 7;<br><br>	public static void main(String[] args) throws IOException {<br><br>		int port;<br><br>		try {<br>			port = Integer.parseInt(args[0]);<br>		} catch (RuntimeException ex) {<br>			port = DEFAULT_PORT;<br>		}<br>		System.out.println("Listening for connections on port " + port);<br><br>		ServerSocketChannel serverChannel;<br>		Selector selector;<br>		try {<br>			serverChannel = ServerSocketChannel.open();<br>			InetSocketAddress address = new InetSocketAddress(port);<br>			serverChannel.bind(address);<br>			serverChannel.configureBlocking(false);<br>			selector = Selector.open();<br>			serverChannel.register(selector, SelectionKey.OP_ACCEPT);<br>		} catch (IOException ex) {<br>			ex.printStackTrace();<br>			return;<br>		}<br><br>		while (true) {<br>			try {<br>				selector.select();<br>			} catch (IOException ex) {<br>				ex.printStackTrace();<br>				break;<br>			}<br>			Set<SelectionKey> readyKeys = selector.selectedKeys();<br>			Iterator<SelectionKey> iterator = readyKeys.iterator();<br>			while (iterator.hasNext()) {<br>				SelectionKey key = iterator.next();<br>				iterator.remove();<br>				try {<br>					if (key.isAcceptable()) {<br>						ServerSocketChannel server = (ServerSocketChannel) key.channel();<br>						SocketChannel client = server.accept();<br>						System.out.println("Accepted connection from " + client);<br>						client.configureBlocking(false);<br>						SelectionKey clientKey = client.register(selector,<br>								SelectionKey.OP_WRITE | SelectionKey.OP_READ);<br>						ByteBuffer buffer = ByteBuffer.allocate(100);<br>						clientKey.attach(buffer);<br>					}<br>					if (key.isReadable()) {<br>						SocketChannel client = (SocketChannel) key.channel();<br>						ByteBuffer output = (ByteBuffer) key.attachment();<br>						client.read(output);<br>					}<br>					if (key.isWritable()) {<br>						SocketChannel client = (SocketChannel) key.channel();<br>						ByteBuffer output = (ByteBuffer) key.attachment();<br>						output.flip();<br>						client.write(output);<br>						<br>						output.compact();<br>					}<br>				} catch (IOException ex) {<br>					key.cancel();<br>					try {<br>						key.channel().close();<br>					} catch (IOException cex) {<br>					}<br>				}<br>			}<br>		}<br><br>	}<br>}<br>```<br><br>## 改进为“异步I/O”模式  <br><br>Java SE 7 版本之后，引入了异步 I/O （NIO.2） 的支持，为构建高性能的网络应用提供了一个利器。<br><br>主线程 AsyncEchoServer.java<br><br>```java<br>public class AsyncEchoServer {<br><br>	public static int DEFAULT_PORT = 7;<br><br>	public static void main(String[] args) throws IOException {<br>		int port;<br><br>		try {<br>			port = Integer.parseInt(args[0]);<br>		} catch (RuntimeException ex) {<br>			port = DEFAULT_PORT;<br>		}<br><br>		ExecutorService taskExecutor = Executors.newCachedThreadPool(Executors.defaultThreadFactory());<br>		// create asynchronous server socket channel bound to the default group<br>		try (AsynchronousServerSocketChannel asynchronousServerSocketChannel = AsynchronousServerSocketChannel.open()) {<br>			if (asynchronousServerSocketChannel.isOpen()) {<br>				// set some options<br>				asynchronousServerSocketChannel.setOption(StandardSocketOptions.SO_RCVBUF, 4 * 1024);<br>				asynchronousServerSocketChannel.setOption(StandardSocketOptions.SO_REUSEADDR, true);<br>				// bind the server socket channel to local address<br>				asynchronousServerSocketChannel.bind(new InetSocketAddress(port));<br>				// display a waiting message while ... waiting clients<br>				System.out.println("Waiting for connections ...");<br>				while (true) {<br>					Future<AsynchronousSocketChannel> asynchronousSocketChannelFuture = asynchronousServerSocketChannel<br>							.accept();<br>					try {<br>						final AsynchronousSocketChannel asynchronousSocketChannel = asynchronousSocketChannelFuture<br>								.get();<br>						Callable<String> worker = new Callable<String>() {<br>							@Override<br>							public String call() throws Exception {<br>								String host = asynchronousSocketChannel.getRemoteAddress().toString();<br>								System.out.println("Incoming connection from: " + host);<br>								final ByteBuffer buffer = ByteBuffer.allocateDirect(1024);<br>								// transmitting data<br>								while (asynchronousSocketChannel.read(buffer).get() != -1) {<br>									buffer.flip();<br>									asynchronousSocketChannel.write(buffer).get();<br>									if (buffer.hasRemaining()) {<br>										buffer.compact();<br>									} else {<br>										buffer.clear();<br>									}<br>								}<br>								asynchronousSocketChannel.close();<br>								System.out.println(host + " was successfully served!");<br>								return host;<br>							}<br>						};<br>						taskExecutor.submit(worker);<br>					} catch (InterruptedException | ExecutionException ex) {<br>						System.err.println(ex);<br>						System.err.println("\n Server is shutting down ...");<br>						// this will make the executor accept no new threads<br>						// and finish all existing threads in the queue<br>						taskExecutor.shutdown();<br>						// wait until all threads are finished<br>						while (!taskExecutor.isTerminated()) {<br>						}<br>						break;<br>					}<br>				}<br>			} else {<br>				System.out.println("The asynchronous server-socket channel cannot be opened!");<br>			}<br>		} catch (IOException ex) {<br>			System.err.println(ex);<br>		}<br>	}<br>}<br>```<br><br>## 源码<br><br>本章例子的源码，可以在 <https://github.com/waylau/essential-java> 中 `com.waylau.essentialjava.net.echo` 包下找到。</div></div>
+			<nav>
+				<ul class="pager">
+				<li class='previous'><a href='24.html'>&larr; Socket</a></li>
+			<li class='next'><a href='26.html'>JDBC&rarr;</a></li>
+				</ul>
+			</nav>
+</div>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+			<!-- /.row -->
+			  <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; 小龙软件工作室 2016 粤icp备16103410</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

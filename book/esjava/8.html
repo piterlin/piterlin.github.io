@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+<meta name="360-site-verification" content="cabcfb5a0f4c0d28d604e8a69e6c0cdb" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="baidu-site-verification" content="HknqsD2zhn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java 编程要点-编码助手网</title>
+      <meta content="为编码人员提供在线文档、模板等帮助，提升解决问题效率" name="description">
+			<meta content="Java 编程要点 Java, spring, tomcat, servlet, jsp, api doc, bootstrap" name="keywords">
+<meta name="sogou_site_verification" content="42nApEZFKO"/>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?dd1361ca20a10cc161e72d4bc4fef6df";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">编码助手网</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+										<li>
+                        <a href="/template.html">模板</a>
+                    </li>
+										<li>
+												<a href="/doc.html">文档</a>
+										</li>
+                    <li>
+                        <a href="/contact.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<div class="row">
+					<div class="col-xs-4">
+						<h4>Java 编程要点</h4>
+						<h6>感谢2015 Way Lau提供内容</h6>
+<ul><li><a href='./0.html'>快速开始</a></li><li><a href='./1.html'>Java概述</a></li><li><a href='./2.html'>面向对象编程</a></li><li><a href='./3.html'>语言基础</a></li><li><ul><li><a href='./4.html'>变量</a></li><li><a href='./5.html'>运算符</a></li><li><a href='./6.html'>表达式、语句和块</a></li><li><a href='./7.html'>控制流程语句</a></li></ul></li><li><a href='./8.html'>类和对象</a></li><li><a href='./9.html'>注解</a></li><li><a href='./10.html'>泛型</a></li><li><a href='./11.html'>关键字</a></li><li><a href='./12.html'>IO</a></li><li><ul><li><a href='./13.html'>I/O 流</a></li><li><a href='./14.html'>文件 I/O</a></li></ul></li><li><a href='./15.html'>并发</a></li><li><ul><li><a href='./16.html'>进程（Processes ）和线程（Threads）</a></li><li><a href='./17.html'>同步</a></li><li><a href='./18.html'>活跃度（Liveness）</a></li><li><a href='./19.html'>Guarded Blocks</a></li><li><a href='./20.html'>不可变对象（Immutable Objects)</a></li><li><a href='./21.html'>高级并发对象</a></li></ul></li><li><a href='./22.html'>集合框架</a></li><li><a href='./23.html'>网络基础</a></li><li><ul><li><a href='./24.html'>Socket</a></li><li><a href='./25.html'>I/O 模型的演进</a></li></ul></li><li><a href='./26.html'>JDBC</a></li><li><a href='./27.html'>附录</a></li><li></li>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+<div class="col-xs-8">
+	<nav>
+		<ul class="pager">
+			<li class='previous'><a href='7.html'>&larr; 控制流程语句</a></li>
+		<li class='next'><a href='9.html'>注解&rarr;</a></li>
+		</ul>
+	</nav>
+			<div class="row"><div class="col-xs-12"># 类和对象<br><br>## 枚举类型（Enum Type）<br><br>枚举类型是一种特殊的数据类型，使一个变量是一组预定义的常量。变量必须等于已预先定义的值之一。常见的例子包括罗盘方向（ NORTH, SOUTH, EAST 和 WEST）和星期几。<br><br>使用关键字 enum ，下面是一个星期几的枚举列子:<br><br>```<br>public enum Day {<br>    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,<br>    THURSDAY, FRIDAY, SATURDAY <br>}<br>```<br><br>使用枚举类型，需要一组固定的常数。这包括自然枚举类型，如在我们的太阳系的行星，菜单上的选项，命令行标志，等等。<br><br>下面是一些代码，展示如何使用上面定义的 Day 枚举：<br><br>```java<br>class EnumTest {<br><br>	Day day;<br>    <br>    public EnumTest(Day day) {<br>        this.day = day;<br>    }<br>    <br>    public void tellItLikeItIs() {<br>        switch (day) {<br>            case MONDAY:<br>                System.out.println("Mondays are bad.");<br>                break;<br>                    <br>            case FRIDAY:<br>                System.out.println("Fridays are better.");<br>                break;<br>                         <br>            case SATURDAY: case SUNDAY:<br>                System.out.println("Weekends are best.");<br>                break;<br>                        <br>            default:<br>                System.out.println("Midweek days are so-so.");<br>                break;<br>        }<br>    }<br>    <br>    public static void main(String[] args) {<br>        EnumTest firstDay = new EnumTest(Day.MONDAY);<br>        firstDay.tellItLikeItIs();<br>        EnumTest thirdDay = new EnumTest(Day.WEDNESDAY);<br>        thirdDay.tellItLikeItIs();<br>        EnumTest fifthDay = new EnumTest(Day.FRIDAY);<br>        fifthDay.tellItLikeItIs();<br>        EnumTest sixthDay = new EnumTest(Day.SATURDAY);<br>        sixthDay.tellItLikeItIs();<br>        EnumTest seventhDay = new EnumTest(Day.SUNDAY);<br>        seventhDay.tellItLikeItIs();<br>    }<br>}<br>```<br><br>输出为：<br><br>```<br>Mondays are bad.<br>Midweek days are so-so.<br>Fridays are better.<br>Weekends are best.<br>Weekends are best.<br>```<br><br>下面是一个 Planet 示例，展示了 枚举值的 for-each 遍历：<br><br>```java<br>public enum Planet {<br>    MERCURY (3.303e+23, 2.4397e6),<br>    VENUS   (4.869e+24, 6.0518e6),<br>    EARTH   (5.976e+24, 6.37814e6),<br>    MARS    (6.421e+23, 3.3972e6),<br>    JUPITER (1.9e+27,   7.1492e7),<br>    SATURN  (5.688e+26, 6.0268e7),<br>    URANUS  (8.686e+25, 2.5559e7),<br>    NEPTUNE (1.024e+26, 2.4746e7);<br><br>    private final double mass;   // in kilograms<br>    private final double radius; // in meters<br>    Planet(double mass, double radius) {<br>        this.mass = mass;<br>        this.radius = radius;<br>    }<br>    private double mass() { return mass; }<br>    private double radius() { return radius; }<br><br>    // universal gravitational constant  (m3 kg-1 s-2)<br>    public static final double G = 6.67300E-11;<br><br>    double surfaceGravity() {<br>        return G * mass / (radius * radius);<br>    }<br>    double surfaceWeight(double otherMass) {<br>        return otherMass * surfaceGravity();<br>    }<br>    public static void main(String[] args) {<br>        if (args.length != 1) {<br>            System.err.println("Usage: java Planet <earth_weight>");<br>            System.exit(-1);<br>        }<br>        double earthWeight = Double.parseDouble(args[0]);<br>        double mass = earthWeight/EARTH.surfaceGravity();<br>        for (Planet p : Planet.values())<br>           System.out.printf("Your weight on %s is %f%n",<br>                             p, p.surfaceWeight(mass));<br>    }<br>}<br>```<br><br>在命令行，输入参数为 175 时，<br>输出如下：<br><br>```<br>$ java Planet 175<br>Your weight on MERCURY is 66.107583<br>Your weight on VENUS is 158.374842<br>Your weight on EARTH is 175.000000<br>Your weight on MARS is 66.279007<br>Your weight on JUPITER is 442.847567<br>Your weight on SATURN is 186.552719<br>Your weight on URANUS is 158.397260<br>Your weight on NEPTUNE is 199.207413<br>```</div></div>
+			<nav>
+				<ul class="pager">
+				<li class='previous'><a href='7.html'>&larr; 控制流程语句</a></li>
+			<li class='next'><a href='9.html'>注解&rarr;</a></li>
+				</ul>
+			</nav>
+</div>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+			<!-- /.row -->
+			  <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; 小龙软件工作室 2016 粤icp备16103410</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+<meta name="360-site-verification" content="cabcfb5a0f4c0d28d604e8a69e6c0cdb" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="baidu-site-verification" content="HknqsD2zhn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java 编程要点-编码助手网</title>
+      <meta content="为编码人员提供在线文档、模板等帮助，提升解决问题效率" name="description">
+			<meta content="Java 编程要点 Java, spring, tomcat, servlet, jsp, api doc, bootstrap" name="keywords">
+<meta name="sogou_site_verification" content="42nApEZFKO"/>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?dd1361ca20a10cc161e72d4bc4fef6df";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">编码助手网</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+										<li>
+                        <a href="/template.html">模板</a>
+                    </li>
+										<li>
+												<a href="/doc.html">文档</a>
+										</li>
+                    <li>
+                        <a href="/contact.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<div class="row">
+					<div class="col-xs-4">
+						<h4>Java 编程要点</h4>
+						<h6>感谢2015 Way Lau提供内容</h6>
+<ul><li><a href='./0.html'>快速开始</a></li><li><a href='./1.html'>Java概述</a></li><li><a href='./2.html'>面向对象编程</a></li><li><a href='./3.html'>语言基础</a></li><li><ul><li><a href='./4.html'>变量</a></li><li><a href='./5.html'>运算符</a></li><li><a href='./6.html'>表达式、语句和块</a></li><li><a href='./7.html'>控制流程语句</a></li></ul></li><li><a href='./8.html'>类和对象</a></li><li><a href='./9.html'>注解</a></li><li><a href='./10.html'>泛型</a></li><li><a href='./11.html'>关键字</a></li><li><a href='./12.html'>IO</a></li><li><ul><li><a href='./13.html'>I/O 流</a></li><li><a href='./14.html'>文件 I/O</a></li></ul></li><li><a href='./15.html'>并发</a></li><li><ul><li><a href='./16.html'>进程（Processes ）和线程（Threads）</a></li><li><a href='./17.html'>同步</a></li><li><a href='./18.html'>活跃度（Liveness）</a></li><li><a href='./19.html'>Guarded Blocks</a></li><li><a href='./20.html'>不可变对象（Immutable Objects)</a></li><li><a href='./21.html'>高级并发对象</a></li></ul></li><li><a href='./22.html'>集合框架</a></li><li><a href='./23.html'>网络基础</a></li><li><ul><li><a href='./24.html'>Socket</a></li><li><a href='./25.html'>I/O 模型的演进</a></li></ul></li><li><a href='./26.html'>JDBC</a></li><li><a href='./27.html'>附录</a></li><li></li>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+<div class="col-xs-8">
+	<nav>
+		<ul class="pager">
+			<li class='previous'><a href='4.html'>&larr; 变量</a></li>
+		<li class='next'><a href='6.html'>表达式、语句和块&rarr;</a></li>
+		</ul>
+	</nav>
+			<div class="row"><div class="col-xs-12"># 运算符<br><br>靠近表顶部的运算符，其优先级最高。具有较高优先级的运算符在相对较低的优先级的运算符之前被评估。在同一行上的运算符具有相同的优先级。当在相同的表达式中出现相同优先级的运算符时，必须首先对该规则进行评估。除了赋值运算符外，所有二进制运算符进行评估从左到右，赋值操作符是从右到左。<br><br>运算符优先级表：<br><br>运算符 | 优先级<br>---- | ----<br>后缀（postfix） | `expr++ expr--`<br>一元运算（unary） | `++expr --expr +expr -expr ~ !`<br>乘法（multiplicative）	| `* / %`<br>加法（additive）	| `+ -`<br>移位运算（shift） | `<< >> >>>`<br>关系（relational） | `< > <= >= instanceof`<br>相等（equality） | `== !=`<br>与运算（bitwise AND）	 | `&`<br>异或运算（bitwise exclusive OR）	 | `^`<br>或运算（bitwise inclusive OR）	 | `|`<br>逻辑与运算（logical AND）	 | `&&`<br>逻辑或运算（logical OR）	 |`||`<br>三元运算（ternary）	 | `? :`<br>赋值运算（assignment）	 | `= += -= *= /= %= &= ^= |= <<= >>= >>>=`<br><br>## 赋值运算符<br><br>赋值运算符是最常用和最简单的运算符就是`=`，如下：<br><br>```<br>int cadence = 0;<br>int speed = 0;<br>int gear = 1;<br>```<br><br>该运算符也用于对象的引用关联。<br><br>## 算术运算符<br><br>算术运算符包括：<br><br>运算符 | 描述<br>---- | ----<br>+	| 加 (也用于 String 的连接)<br>-	| 减<br>*	| 乘<br>/	| 除<br>%	| 取余<br><br>ArithmeticDemo 的例子<br><br>```java<br>class ArithmeticDemo {<br><br>	/**<br>	 * @param args<br>	 */<br>	public static void main(String[] args) {<br>		int result = 1 + 2;<br>		// result is now 3<br>		System.out.println("1 + 2 = " + result);<br>		int original_result = result;<br><br>		result = result - 1;<br>		// result is now 2<br>		System.out.println(original_result + " - 1 = " + result);<br>		original_result = result;<br><br>		result = result * 2;<br>		// result is now 4<br>		System.out.println(original_result + " * 2 = " + result);<br>		original_result = result;<br><br>		result = result / 2;<br>		// result is now 2<br>		System.out.println(original_result + " / 2 = " + result);<br>		original_result = result;<br><br>		result = result + 8;<br>		// result is now 10<br>		System.out.println(original_result + " + 8 = " + result);<br>		original_result = result;<br><br>		result = result % 7;<br>		// result is now 3<br>		System.out.println(original_result + " % 7 = " + result);<br>	}<br><br>}<br>```<br><br>输出为：<br><br>```<br>1 + 2 = 3<br>3 - 1 = 2<br>2 * 2 = 4<br>4 / 2 = 2<br>2 + 8 = 10<br>10 % 7 = 3<br>```<br><br>`+` 用于字符串连接的例子 ConcatDemo ：<br><br>```java<br>class ConcatDemo {<br><br>	/**<br>	 * @param args<br>	 */<br>	public static void main(String[] args) {<br>        String firstString = "This is";<br>        String secondString = " a concatenated string.";<br>        String thirdString = firstString+secondString;<br>        System.out.println(thirdString);<br>	}<br>}<br>```<br><br>## 一元操作<br><br>一元运算符只需要一个操作数。<br><br>运算符 | 描述<br>---- | ----<br>+ | 加运算;指正值<br>- | 减运算符;表达成负值<br>++ | 递增运算符;递增值1<br>- | 递减运算符;递减值1<br>！| 逻辑补运算;反转一个布尔值<br><br>下面是 UnaryDemo 的示例：<br><br>```java<br>class UnaryDemo {<br><br>	/**<br>	 * @param args<br>	 */<br>	public static void main(String[] args) {<br>		int result = +1;<br>        // result is now 1<br>        System.out.println(result);<br><br>        result--;<br>        // result is now 0<br>        System.out.println(result);<br><br>        result++;<br>        // result is now 1<br>        System.out.println(result);<br><br>        result = -result;<br>        // result is now -1<br>        System.out.println(result);<br><br>        boolean success = false;<br>        // false<br>        System.out.println(success);<br>        // true<br>        System.out.println(!success);<br>	}<br><br>}<br>```<br><br>递增/递减运算符可以之前（前缀）或（后缀）操作数后应用。该代码`result++;` 和 `++result;` 两个的 result 都被加一。唯一的区别是，该前缀版本`++result;`增递增了，而后缀版本`result++;`的计算结果为原始值。下面是 PrePostDemo  的示例，说明了两者的区别：<br><br>```java<br>class PrePostDemo {<br><br>	/**<br>	 * @param args<br>	 */<br>	public static void main(String[] args) {<br>		int i = 3;<br>        i++;<br>        // prints 4<br>        System.out.println(i);<br>        ++i;			   <br>        // prints 5<br>        System.out.println(i);<br>        // prints 6<br>        System.out.println(++i);<br>        // prints 6<br>        System.out.println(i++);<br>        // prints 7<br>        System.out.println(i);<br>	}<br>}<br>```<br><br>## 等价和关系运算符<br><br>等价和关系运算符包括<br><br>运算符 | 描述<br>---- | ----<br>==   |    相等（equal to）<br>!=   |    不相等（not equal to）<br>>    |    大于（greater than）<br>>=   |    大于等于（greater than or equal to）<br><    |    小于（less than）<br><=   |    小于等于（less than or equal to）<br><br>ComparisonDemo 对比的例子：<br><br><br>```java<br>class ComparisonDemo {<br><br>	/**<br>	 * @param args<br>	 */<br>	public static void main(String[] args) {<br>		int value1 = 1;<br>		int value2 = 2;<br>		if (value1 == value2)<br>			System.out.println("value1 == value2");<br>		if (value1 != value2)<br>			System.out.println("value1 != value2");<br>		if (value1 > value2)<br>			System.out.println("value1 > value2");<br>		if (value1 < value2)<br>			System.out.println("value1 < value2");<br>		if (value1 <= value2)<br>			System.out.println("value1 <= value2");<br>	}<br>}<br>```<br><br>输出为：<br><br>```<br>value1 != value2<br>value1 < value2<br>value1 <= value2<br>```<br><br>## 条件运算符<br><br>条件运算符包括：<br><br>运算符 | 描述<br>---- | ----<br>&&  | 条件与（Conditional-AND）<br>||  | 条件或（Conditional-OR）<br>?:  | 三元运算符（ternary operator）<br><br>条件与、条件或的运算符例子 ConditionalDemo1： <br><br>```java<br>class ConditionalDemo1 {<br><br>	/**<br>	 * @param args<br>	 */<br>	public static void main(String[] args) {<br>		int value1 = 1;<br>		int value2 = 2;<br>		if ((value1 == 1) && (value2 == 2))<br>			System.out.println("value1 is 1 AND value2 is 2");<br>		if ((value1 == 1) || (value2 == 1))<br>			System.out.println("value1 is 1 OR value2 is 1");<br>	}<br>}<br>```<br><br>输出：<br><br>value1 is 1 AND value2 is 2<br>value1 is 1 OR value2 is 1<br><br>下面是一个三元运算符的例子,类似与 if-then-else 语句，见 ConditionalDemo2 ：<br><br>```java<br>class ConditionalDemo2 {<br><br>	/**<br>	 * @param args<br>	 */<br>	public static void main(String[] args) {<br>		int value1 = 1;<br>		int value2 = 2;<br>		int result;<br>		boolean someCondition = true;<br>		result = someCondition ? value1 : value2;<br><br>		System.out.println(result);<br>	}<br>}<br>```<br><br>## instanceof 运算符<br><br>instanceof 用于匹配判断对象的类型。可以用它来测试对象是否是类的一个实例，子类的实例，或者是实现了一个特定接口的类的实例。见例子 InstanceofDemo,父类是 Parent ，接口是 MyInterface ，子类是 Child 继承了父类并实现了接口。<br><br>```java<br>class InstanceofDemo {<br><br>	/**<br>	 * @param args<br>	 */<br>	public static void main(String[] args) {<br>		<br>		// Must qualify the allocation with an enclosing instance of type InstanceofDemo <br>		Parent obj1 = new InstanceofDemo().new Parent();<br>        Parent obj2 = new InstanceofDemo().new Child();<br><br>        System.out.println("obj1 instanceof Parent: "<br>            + (obj1 instanceof Parent));<br>        System.out.println("obj1 instanceof Child: "<br>            + (obj1 instanceof Child));<br>        System.out.println("obj1 instanceof MyInterface: "<br>            + (obj1 instanceof MyInterface));<br>        System.out.println("obj2 instanceof Parent: "<br>            + (obj2 instanceof Parent));<br>        System.out.println("obj2 instanceof Child: "<br>            + (obj2 instanceof Child));<br>        System.out.println("obj2 instanceof MyInterface: "<br>            + (obj2 instanceof MyInterface));<br>	}<br><br>	class Parent {}<br>	class Child extends Parent implements MyInterface {}<br>	interface MyInterface {}<br>}<br>```<br><br>输出为：<br><br>```<br>obj1 instanceof Parent: true<br>obj1 instanceof Child: false<br>obj1 instanceof MyInterface: false<br>obj2 instanceof Parent: true<br>obj2 instanceof Child: true<br>obj2 instanceof MyInterface: true<br>```<br><br>**注：**null 不是任何类的实例<br><br>## 位运算和位移运算符<br><br>位运算和位移运算符适用于整型。<br><br>### 位运算符<br><br>运算符 | 描述<br>---- | ----<br>`&` | 与<br>`|` | 或<br>`^` | 异或<br>`~` | 非（把0变成1，把1变成0）<br><br>BitDemo 例子：<br><br>```java<br>class BitDemo {<br><br>	/**<br>	 * @param args<br>	 */<br>	public static void main(String[] args) {<br>		int bitmask = 0x000F;<br>		int val = 0x2222;<br>		// prints "2"<br>		System.out.println(val & bitmask);<br>	}<br>}<br>```<br><br>### 位移运算符<br><br>首先我们先阐述一下符号位的概念:<br><br>* 符号位：是数的最后一位，不用来计算的；<br>* 当符号位为0时，值为正数；当符号位为1时，值为负数；<br>* 无符号位时为正数，有符号位时为正数或者负数；<br><br>运算符 | 描述<br>---- | ----<br>`<<` | 左移<br>`>>` | 右移<br>`>>>` | 右移（补零）<br><br>左移（<<） 运算形式：值 << 位数<br><br>右移（>>） 运算形式：值 >> 位数<br><br>移动后，左移、右移都会保留符号位！<br><br>右移（补零），移动后，不保留符号位，永远为正数，因为其符号位总是被补零；<br><br>## 源码<br><br>本章例子的源码，可以在 `com.waylau.essentialjava.operator` 包下找到。</div></div>
+			<nav>
+				<ul class="pager">
+				<li class='previous'><a href='4.html'>&larr; 变量</a></li>
+			<li class='next'><a href='6.html'>表达式、语句和块&rarr;</a></li>
+				</ul>
+			</nav>
+</div>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+			<!-- /.row -->
+			  <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; 小龙软件工作室 2016 粤icp备16103410</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

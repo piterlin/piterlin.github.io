@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+<meta name="360-site-verification" content="cabcfb5a0f4c0d28d604e8a69e6c0cdb" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="baidu-site-verification" content="HknqsD2zhn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>js函数式编程指南(mostly adequate guide)-编码助手网</title>
+      <meta content="为编码人员提供在线文档、模板等帮助，提升解决问题效率" name="description">
+			<meta content="js函数式编程指南(mostly adequate guide) Java, spring, tomcat, servlet, jsp, api doc, bootstrap" name="keywords">
+<meta name="sogou_site_verification" content="42nApEZFKO"/>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?dd1361ca20a10cc161e72d4bc4fef6df";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">编码助手网</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+										<li>
+                        <a href="/template.html">模板</a>
+                    </li>
+										<li>
+												<a href="/doc.html">文档</a>
+										</li>
+                    <li>
+                        <a href="/contact.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<div class="row">
+					<div class="col-xs-4">
+						<h4>js函数式编程指南(mostly adequate guide)</h4>
+						<h6>感谢llh911001.gitbooks.io提供译本</h6>
+<ul><li><a href='./0.html'>第 1 章: 我们在做什么？</a></li><li><a href='./1.html'>第 2 章: 一等公民的函数</a></li><li><a href='./2.html'>第 3 章: 纯函数的好处</a></li><li><a href='./3.html'>第 4 章: 柯里化（curry）</a></li><li><a href='./4.html'>第 5 章: 代码组合（compose）</a></li><li><a href='./5.html'>第 6章: 示例应用</a></li><li><a href='./6.html'>第 7 章: Hindley-Milner 类型签名</a></li><li><a href='./7.html'>第 8 章: 特百惠</a></li><li><a href='./8.html'>第 9 章: Monad</a></li><li><a href='./9.html'>第 10 章: Applicative Functor</a></li><li></li>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+<div class="col-xs-8">
+	<nav>
+		<ul class="pager">
+			<li class='previous'><a href='2.html'>&larr; 第 3 章: 纯函数的好处</a></li>
+		<li class='next'><a href='4.html'>第 5 章: 代码组合（compose）&rarr;</a></li>
+		</ul>
+	</nav>
+			<div class="row"><div class="col-xs-12"># 第 4 章: 柯里化（curry）<br><br>## 不可或缺的 curry<br><br>（译者注：原标题是“Can't live if livin' is without you”，为英国乐队 Badfinger 歌曲 *Without You* 中歌词。）<br><br>我父亲以前跟我说过，有些事物在你得到之前是无足轻重的，得到之后就不可或缺了。微波炉是这样，智能手机是这样，互联网也是这样——老人们在没有互联网的时候过得也很充实。对我来说，函数的柯里化（curry）也是这样。<br><br>curry 的概念很简单：只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数。<br><br>你可以一次性地调用 curry 函数，也可以每次只传一个参数分多次调用。<br><br>```js<br>var add = function(x) {<br>  return function(y) {<br>    return x + y;<br>  };<br>};<br><br>var increment = add(1);<br>var addTen = add(10);<br><br>increment(2);<br>// 3<br><br>addTen(2);<br>// 12<br>```<br><br>这里我们定义了一个 `add` 函数，它接受一个参数并返回一个新的函数。调用 `add` 之后，返回的函数就通过闭包的方式记住了 `add` 的第一个参数。一次性地调用它实在是有点繁琐，好在我们可以使用一个特殊的 `curry` 帮助函数（helper function）使这类函数的定义和调用更加容易。<br><br>我们来创建一些 curry 函数享受下（译者注：此处原文是“for our enjoyment”，语出自圣经）。<br><br>```js<br>var curry = require('lodash').curry;<br><br>var match = curry(function(what, str) {<br>  return str.match(what);<br>});<br><br>var replace = curry(function(what, replacement, str) {<br>  return str.replace(what, replacement);<br>});<br><br>var filter = curry(function(f, ary) {<br>  return ary.filter(f);<br>});<br><br>var map = curry(function(f, ary) {<br>  return ary.map(f);<br>});<br>```<br><br>我在上面的代码中遵循的是一种简单，同时也非常重要的模式。即策略性地把要操作的数据（String， Array）放到最后一个参数里。到使用它们的时候你就明白这样做的原因是什么了。<br><br>```js<br>match(/\s+/g, "hello world");<br>// [ ' ' ]<br><br>match(/\s+/g)("hello world");<br>// [ ' ' ]<br><br>var hasSpaces = match(/\s+/g);<br>// function(x) { return x.match(/\s+/g) }<br><br>hasSpaces("hello world");<br>// [ ' ' ]<br><br>hasSpaces("spaceless");<br>// null<br><br>filter(hasSpaces, ["tori_spelling", "tori amos"]);<br>// ["tori amos"]<br><br>var findSpaces = filter(hasSpaces);<br>// function(xs) { return xs.filter(function(x) { return x.match(/\s+/g) }) }<br><br>findSpaces(["tori_spelling", "tori amos"]);<br>// ["tori amos"]<br><br>var noVowels = replace(/[aeiou]/ig);<br>// function(replacement, x) { return x.replace(/[aeiou]/ig, replacement) }<br><br>var censored = noVowels("*");<br>// function(x) { return x.replace(/[aeiou]/ig, "*") }<br><br>censored("Chocolate Rain");<br>// 'Ch*c*l*t* R**n'<br>```<br><br>这里表明的是一种“预加载”函数的能力，通过传递一到两个参数调用函数，就能得到一个记住了这些参数的新函数。<br><br>我鼓励你使用 `npm install lodash` 安装 `lodash`，复制上面的代码放到 REPL 里跑一跑。当然你也可以在能够使用 `lodash` 或 `ramda` 的网页中运行它们。<br><br>## 不仅仅是双关语／咖喱<br><br>curry 的用处非常广泛，就像在 `hasSpaces`、`findSpaces` 和 `censored` 看到的那样，只需传给函数一些参数，就能得到一个新函数。<br><br>用 `map` 简单地把参数是单个元素的函数包裹一下，就能把它转换成参数为数组的函数。<br><br>```js<br>var getChildren = function(x) {<br>  return x.childNodes;<br>};<br><br>var allTheChildren = map(getChildren);<br>```<br><br>只传给函数一部分参数通常也叫做*局部调用*（partial application），能够大量减少样板文件代码（boilerplate code）。考虑上面的 `allTheChildren` 函数，如果用 lodash 的普通 `map` 来写会是什么样的（注意参数的顺序也变了）：<br><br>```js<br>var allTheChildren = function(elements) {<br>  return _.map(elements, getChildren);<br>};<br>```<br><br>通常我们不定义直接操作数组的函数，因为只需内联调用 `map(getChildren)` 就能达到目的。这一点同样适用于 `sort`、`filter` 以及其他的高阶函数（higher order function）（高阶函数：参数或返回值为函数的函数）。<br><br>当我们谈论*纯函数*的时候，我们说它们接受一个输入返回一个输出。curry 函数所做的正是这样：每传递一个参数调用函数，就返回一个新函数处理剩余的参数。这就是一个输入对应一个输出啊。<br><br>哪怕输出是另一个函数，它也是纯函数。当然 curry 函数也允许一次传递多个参数，但这只是出于减少 `()` 的方便。<br><br>## 总结<br><br>curry 函数用起来非常得心应手，每天使用它对我来说简直就是一种享受。它堪称手头必备工具，能够让函数式编程不那么繁琐和沉闷。<br><br>通过简单地传递几个参数，就能动态创建实用的新函数；而且还能带来一个额外好处，那就是保留了数学的函数定义，尽管参数不止一个。<br>下一章我们将学习另一个重要的工具：`组合`（compose）。<br><br>[第 5 章: 代码组合（compose）](ch5.md)<br><br>## 练习<br><br>开始练习之前先说明一下，我们将默认使用 [ramda](http://ramdajs.com) 这个库来把函数转为 curry 函数。或者你也可以选择由 losash 的作者编写和维护的 [lodash-fp](https://github.com/lodash/lodash-fp)。这两个库都很好用，选择哪一个就看你自己的喜好了。<br><br>你还可以对自己的练习代码做[单元测试](https://github.com/llh911001/mostly-adequate-guide-chinese/tree/master/code/part1_exercises)，或者把代码拷贝到一个 REPL 里运行看看。<br><br>这些练习的答案可以在[本书仓库](https://github.com/llh911001/mostly-adequate-guide-chinese/tree/master/code/part1_exercises/answers)中找到。<br><br>```js<br>var _ = require('ramda');<br><br><br>// 练习 1<br>//==============<br>// 通过局部调用（partial apply）移除所有参数<br><br>var words = function(str) {<br>  return split(' ', str);<br>};<br><br>// 练习 1a<br>//==============<br>// 使用 `map` 创建一个新的 `words` 函数，使之能够操作字符串数组<br><br>var sentences = undefined;<br><br><br>// 练习 2<br>//==============<br>// 通过局部调用（partial apply）移除所有参数<br><br>var filterQs = function(xs) {<br>  return filter(function(x){ return match(/q/i, x);  }, xs);<br>};<br><br><br>// 练习 3<br>//==============<br>// 使用帮助函数 `_keepHighest` 重构 `max` 使之成为 curry 函数<br><br>// 无须改动:<br>var _keepHighest = function(x,y){ return x >= y ? x : y; };<br><br>// 重构这段代码:<br>var max = function(xs) {<br>  return reduce(function(acc, x){<br>    return _keepHighest(acc, x);<br>  }, -Infinity, xs);<br>};<br><br><br>// 彩蛋 1:<br>// ============<br>// wrap array's slice to be functional and curried.<br>// 包裹数组的 `slice` 函数使之成为 curry 函数<br>// //[1,2,3].slice(0, 2)<br>var slice = undefined;<br><br><br>// 彩蛋 2:<br>// ============<br>// 借助 `slice` 定义一个 `take` curry 函数，接受 n 个元素为参数。<br>var take = undefined;<br>```<br></div></div>
+			<nav>
+				<ul class="pager">
+				<li class='previous'><a href='2.html'>&larr; 第 3 章: 纯函数的好处</a></li>
+			<li class='next'><a href='4.html'>第 5 章: 代码组合（compose）&rarr;</a></li>
+				</ul>
+			</nav>
+</div>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+			<!-- /.row -->
+			  <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; 小龙软件工作室 2016 粤icp备16103410</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

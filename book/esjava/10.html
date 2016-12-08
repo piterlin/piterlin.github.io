@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+<meta name="360-site-verification" content="cabcfb5a0f4c0d28d604e8a69e6c0cdb" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="baidu-site-verification" content="HknqsD2zhn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java 编程要点-编码助手网</title>
+      <meta content="为编码人员提供在线文档、模板等帮助，提升解决问题效率" name="description">
+			<meta content="Java 编程要点 Java, spring, tomcat, servlet, jsp, api doc, bootstrap" name="keywords">
+<meta name="sogou_site_verification" content="42nApEZFKO"/>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?dd1361ca20a10cc161e72d4bc4fef6df";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">编码助手网</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+										<li>
+                        <a href="/template.html">模板</a>
+                    </li>
+										<li>
+												<a href="/doc.html">文档</a>
+										</li>
+                    <li>
+                        <a href="/contact.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<div class="row">
+					<div class="col-xs-4">
+						<h4>Java 编程要点</h4>
+						<h6>感谢2015 Way Lau提供内容</h6>
+<ul><li><a href='./0.html'>快速开始</a></li><li><a href='./1.html'>Java概述</a></li><li><a href='./2.html'>面向对象编程</a></li><li><a href='./3.html'>语言基础</a></li><li><ul><li><a href='./4.html'>变量</a></li><li><a href='./5.html'>运算符</a></li><li><a href='./6.html'>表达式、语句和块</a></li><li><a href='./7.html'>控制流程语句</a></li></ul></li><li><a href='./8.html'>类和对象</a></li><li><a href='./9.html'>注解</a></li><li><a href='./10.html'>泛型</a></li><li><a href='./11.html'>关键字</a></li><li><a href='./12.html'>IO</a></li><li><ul><li><a href='./13.html'>I/O 流</a></li><li><a href='./14.html'>文件 I/O</a></li></ul></li><li><a href='./15.html'>并发</a></li><li><ul><li><a href='./16.html'>进程（Processes ）和线程（Threads）</a></li><li><a href='./17.html'>同步</a></li><li><a href='./18.html'>活跃度（Liveness）</a></li><li><a href='./19.html'>Guarded Blocks</a></li><li><a href='./20.html'>不可变对象（Immutable Objects)</a></li><li><a href='./21.html'>高级并发对象</a></li></ul></li><li><a href='./22.html'>集合框架</a></li><li><a href='./23.html'>网络基础</a></li><li><ul><li><a href='./24.html'>Socket</a></li><li><a href='./25.html'>I/O 模型的演进</a></li></ul></li><li><a href='./26.html'>JDBC</a></li><li><a href='./27.html'>附录</a></li><li></li>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+<div class="col-xs-8">
+	<nav>
+		<ul class="pager">
+			<li class='previous'><a href='9.html'>&larr; 注解</a></li>
+		<li class='next'><a href='11.html'>关键字&rarr;</a></li>
+		</ul>
+	</nav>
+			<div class="row"><div class="col-xs-12"># 泛型（Generics）<br><br>泛型通过在编译时检测到更多的代码 bug 从而使你的代码更加稳定。<br><br>## 泛型的作用<br><br>概括地说，泛型支持类型（类和接口）在定义类，接口和方法时作为参数。就像在方法声明中使用的形式参数（formal parameters），类型参数提供了一种输入可以不同但代码可以重用的方式。所不同的是，形式参数的输入是值，类型参数输入的是类型参数。<br><br>使用泛型对比非泛型代码有很多好处：<br><br>* 在编译时更强的类型检查。<br><br>如果代码违反了类型安全，Java 编译器将针对泛型和问题错误采用强大的类型检查。修正编译时的错误比修正运行时的错误更加容易。<br><br>* 消除了强制类型转换。<br><br>没有泛型的代码片需要强制转化：<br><br>```<br>List list = new ArrayList();<br>list.add("hello");<br>String s = (String) list.get(0);<br>```<br><br>当重新编写使用泛型，代码不需要强转：<br><br>```<br>List<String> list = new ArrayList<String>();<br>list.add("hello");<br>String s = list.get(0);   // no cast<br>```<br><br>* 使编程人员能够实现通用算法。<br><br>通过使用泛型，程序员可以实现工作在不同类型集合的通用算法，并且是可定制，类型安全，易于阅读。<br><br>## 泛型类型（Generic Types）<br><br>泛型类型是参数化类型的泛型类或接口。下面是一个 Box 类例子来说明这个概念。<br><br>### 一个简单的 Box 类<br><br>```java<br>public class Box {<br>	private Object object;<br><br>	public void set(Object object) {<br>		this.object = object;<br>	}<br><br>	public Object get() {<br>		return object;<br>	}<br>}<br>```<br><br>由于它的方法接受或返回一个 Object，你可以自由地传入任何你想要的类型，只要它不是原始的类型之一。在编译时，没有办法验证如何使用这个类。代码的一部分可以设置 Integer 并期望得到 Integer ，而代码的另一部分可能会由于错误地传递一个String ，而导致运行错误。<br><br>### 一个泛型版本的 Box 类<br><br>泛型类定义语法如下：<br><br>```<br>class name<T1, T2, ..., Tn> { /* ... */ }<br>```<br><br>类型参数部分用 `<>` 包裹，制定了类型参数或称为类型变量（type parameters or  type variables) T1, T2, ..., 直到 Tn.<br><br>下面是代码：<br><br>```java<br>public class Box<T> {<br>	// T stands for "Type"<br>	private T t;<br><br>	public void set(T t) {<br>		this.t = t;<br>	}<br><br>	public T get() {<br>		return t;<br>	}<br><br>}<br>```<br><br>主要，所有的 Object 被 T 代替了。类型变量可以是非基本类型的的任意类型，任意的类、接口、数组或其他类型变量。<br><br>这个技术同样适用于泛型接口的创建。<br><br>### 类型参数命名规范<br><br>按照惯例，类型参数名称是单个大写字母，用来区别普通的类或接口名称。<br><br>常用的类型参数名称如下：<br><br>```<br>E - Element (由 Java 集合框架广泛使用)<br>K - Key<br>N - Number<br>T - Type<br>V - Value<br>S,U,V 等. - 第二种、第三种、第四种类型<br>```<br><br>### 调用和实例化一个泛型<br><br>从代码中引用泛型 Box 类，则必须执行一个泛型调用(generic type invocation)，用具体的值，比如 Integer 取代 T ：<br><br>```<br>Box<Integer> integerBox;<br>```<br><br>泛型调用与普通的方法调用类似，所不同的是传递参数是类型参数（type argument ），本例就是传递 Integer 到 Box 类：<br><br>*Type Parameter 和 Type Argument 区别*<br><br>*编码时，提供  type argument 的一个原因是为了创建 参数化类型。因此，`Foo<T>` 中的 T 是一个 type parameter， 而 `Foo<String>` 中的 String 是一个 type argument*<br><br>与其他变量声明类似，代码实际上没有创建一个新的 Box 对象。它只是声明integerBox 在读到 `Box<Integer>` 时，保存一个“Integer 的 Box”的引用。<br><br>泛型的调用通常被称为一个参数化类型（parameterized type）。<br><br>实例化类，使用 new 关键字：<br><br>```<br>Box<Integer> integerBox = new Box<Integer>();<br>```<br><br>### 菱形（Diamond）<br><br>Java SE 7 开始泛型可以使用空的类型参数集`<>`，只要编译器能够确定，或推断，该类型参数所需的类型参数。这对尖括号`<>`，被非正式地称为“菱形（diamond）”。例如：<br><br>```<br>Box<Integer> integerBox = new Box<>();<br>```<br><br>### 多类型参数<br><br>下面是一个泛型 Pair 接口和一个泛型 OrderedPair ：<br><br>```<br>public interface Pair<K, V> {<br>    public K getKey();<br>    public V getValue();<br>}<br><br>public class OrderedPair<K, V> implements Pair<K, V> {<br><br>    private K key;<br>    private V value;<br><br>    public OrderedPair(K key, V value) {<br>	this.key = key;<br>	this.value = value;<br>    }<br><br>    public K getKey()	{ return key; }<br>    public V getValue() { return value; }<br>}<br>```<br><br>创建两个 OrderedPair 实例：<br><br>```<br>Pair<String, Integer> p1 = new OrderedPair<String, Integer>("Even", 8);<br>Pair<String, String>  p2 = new OrderedPair<String, String>("hello", "world");<br>```<br><br>代码 `new OrderedPair<String, Integer>`，实例 K 作为一个 String 和 V 为 Integer。因此，OrderedPair 的构造函数的参数类型是 String 和 Integer。由于自动装箱（autoboxing），可以有效的传递一个 String 和 int 到这个类。<br><br>可以使用菱形（diamond）来简化代码：<br><br>```<br>OrderedPair<String, Integer> p1 = new OrderedPair<>("Even", 8);<br>OrderedPair<String, String>  p2 = new OrderedPair<>("hello", "world");<br>```<br><br>### 参数化类型<br><br>您也可以用 参数化类型（例如，`List<String>`的）来替换类型参数（即 K 或 V ）。例如，使用`OrderedPair<K，V>`例如：<br><br>```<br>OrderedPair<String, Box<Integer>> p = new OrderedPair<>("primes", new Box<Integer>(...));<br>```<br><br>### 原生类型（Raw Types）<br><br>原生类型是没有类型参数(type arguments)的泛型类和泛型接口，如泛型 Box 类;<br><br>```<br>public class Box<T> {<br>    public void set(T t) { /* ... */ }<br>    // ...<br>}<br>```<br><br>为了创建</div></div>
+			<nav>
+				<ul class="pager">
+				<li class='previous'><a href='9.html'>&larr; 注解</a></li>
+			<li class='next'><a href='11.html'>关键字&rarr;</a></li>
+				</ul>
+			</nav>
+</div>
+							<!-- <h3 style="padding:10px">在线文档</h3> -->
+					</div>
+			<!-- /.row -->
+			  <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; 小龙软件工作室 2016 粤icp备16103410</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
